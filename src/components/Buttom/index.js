@@ -1,10 +1,10 @@
 import React from 'react';
 import * as S from './styles';
 
-const Button = ({text, color}) => {
+const Button = ({text}) => {
   return (
     <>
-      <S.Button color={color}>
+      <S.Button>
         <S.TextButtom>{text}</S.TextButtom>
       </S.Button>
     </>

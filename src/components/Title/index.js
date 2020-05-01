@@ -1,10 +1,10 @@
 import React from 'react';
 import * as S from './styles';
 
-const Title = ({title, color}) => {
+const Title = ({title}) => {
   return (
     <>
-      <S.Title color={color}>{title}</S.Title>
+      <S.Title>{title}</S.Title>
     </>
   );
 };
