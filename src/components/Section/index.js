@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from './styles';
 
-const Section = ({children, orientation}) => {
-  return <S.Section orientation={orientation}>{children}</S.Section>;
+const Section = ({children, justify}) => {
+  return <S.Section justify={justify}>{children}</S.Section>;
 };
 
 Section.defaultProps = {
-  orientation: 'center',
+  justify: 'center',
 };
 
 export default Section;
