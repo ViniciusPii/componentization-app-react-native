@@ -1,13 +1,11 @@
 import React from 'react';
 import * as S from './styles';
 
-const Button = ({text}) => {
+const Button = ({color, text}) => {
   return (
-    <>
-      <S.Button>
-        <S.TextButtom>{text}</S.TextButtom>
-      </S.Button>
-    </>
+    <S.Button color={color}>
+      <S.TextButtom>{text}</S.TextButtom>
+    </S.Button>
   );
 };
 
