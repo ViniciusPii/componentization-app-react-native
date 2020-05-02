@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './styles';
 
-const Buttom = ({color, text, textColor}) => {
+const Buttom = ({color, text, textColor, onPress}) => {
   return (
-    <S.Button color={color}>
+    <S.Button color={color} onPress={onPress}>
       <S.TextButtom textColor={textColor}>{text}</S.TextButtom>
     </S.Button>
   );
