@@ -23,6 +23,7 @@ export const baseColors = {
   //Outros
   ghost: 'transparent',
   placeholder: '#E5E5E5',
+  placeholderNeutral: '#d5dce8',
 
   //Redes Sociais
   facebook: '#4064AD',

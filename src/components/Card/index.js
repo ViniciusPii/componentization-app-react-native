@@ -1,13 +1,35 @@
 import React from 'react';
+
 import * as S from './styles';
 
-const Card = ({name, lastName}) => {
+import PropTypes from 'prop-types';
+
+const Card = ({...props}) => {
   return (
-    <S.Card elevation={10}>
-      <S.Title>Nome: {name}</S.Title>
-      <S.Text>Sobrenome: {lastName}</S.Text>
-    </S.Card>
+    <S.Card
+      elevation={10}
+      width={props.width}
+      height={props.height}
+      mt={props.mt}
+      mb={props.mb}
+      bgColor={props.bgColor}
+      shadow={props.shadow}
+    />
   );
+};
+
+Card.defaultProps = {
+  bgColor: 'white',
+  shadow: 'gray300',
+  width: '90',
+  height: '70',
+  mt: 0,
+  mb: 20,
+};
+
+Card.propType = {
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
 };
 
 export default Card;

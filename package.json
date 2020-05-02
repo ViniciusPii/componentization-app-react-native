@@ -5,11 +5,14 @@
   "scripts": {
     "android": "react-native run-android",
     "i": "react-native run-ios",
+    "a": "react-native run-android",
+    "ai": "react-native run-android && react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "styled-components": "^5.1.0"

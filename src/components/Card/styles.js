@@ -1,22 +1,12 @@
 import styled from 'styled-components/native';
 
 export const Card = styled.View`
-  width: 90%;
-  height: 150px;
-  margin-bottom: 20px;
+  width: ${({width}) => width}%;
+  height: ${({height}) => height}px;
   padding: 15px;
+  margin-top: ${({mt}) => mt}px;
+  margin-bottom: ${({mb}) => mb}px;
   border-radius: 8px;
-  background-color: ${({theme}) => theme.white};
-  box-shadow: 1px 1px 5px ${({theme}) => theme.gray300};
-`;
-
-export const Title = styled.Text`
-  font-size: 24px;
-  color: ${({theme}) => theme.neutral700};
-  margin-bottom: 15px;
-`;
-
-export const Text = styled.Text`
-  font-size: 18px;
-  color: ${({theme}) => theme.neutral500};
+  background-color: ${({theme, bgColor}) => theme[bgColor]};
+  box-shadow: 1px 1px 5px ${({theme, shadow}) => theme[shadow]};
 `;

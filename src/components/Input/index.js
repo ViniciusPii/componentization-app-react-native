@@ -2,6 +2,8 @@ import React from 'react';
 
 import * as S from './styles';
 
+import PropTypes from 'prop-types';
+
 const Input = ({...props}) => {
   console.log(props.label);
   return (
@@ -12,15 +14,22 @@ const Input = ({...props}) => {
       textColor={props.textColor}
       value={props.value}
       onChangeText={props.onChangeText}
+      mt={props.mt}
+      mb={props.mb}
     />
   );
 };
 
 Input.defaultProps = {
   borderColor: 'ghost',
-  bgColor: 'neutral300',
-  labelColor: 'neutral500',
-  textColor: 'neutral800',
+  bgColor: 'placeholderNeutral',
+  textColor: 'neutral700',
+  mt: 0,
+  mb: 20,
+};
+
+Input.propTypes = {
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default Input;

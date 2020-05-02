@@ -1,12 +1,27 @@
 import React from 'react';
+
 import * as S from './styles';
 
-const Title = ({title, color}) => {
-  return <S.Title color={color}>{title}</S.Title>;
+import PropTypes from 'prop-types';
+
+const Title = ({...props}) => {
+  return (
+    <S.Title color={props.color} mt={props.mt} mb={props.mb}>
+      {props.title}
+    </S.Title>
+  );
 };
 
 Title.defaultProps = {
   color: 'neutral700',
+  mt: 20,
+  mb: 20,
+};
+
+Title.protoTypes = {
+  title: PropTypes.string.isRequired,
+  mt: PropTypes.number.isRequired,
+  mb: PropTypes.number.isRequired,
 };
 
 export default Title;
