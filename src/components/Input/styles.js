@@ -15,14 +15,14 @@ export const Input = styled.TextInput`
   font-size: 16px;
 `;
 
-export const Label = styled.Text`
-  position: absolute;
-  left: 12px;
-  top: -10px;
-  z-index: 1;
-  padding: 0 8px;
-  font-size: 16px;
-  background-color: ${({theme}) => theme.white};
-  color: ${({theme, labelColor}) => theme[labelColor]};
-  /* opacity: ${({label}) => (label ? 1 : 0)}; */
-`;
+// export const Label = styled.Text`
+//   position: absolute;
+//   left: 12px;
+//   top: -10px;
+//   z-index: 1;
+//   padding: 0 8px;
+//   font-size: 16px;
+//   /* background-color: ${({theme}) => theme.white}; */
+//   color: ${({theme, labelColor}) => theme[labelColor]};
+//   /* opacity: ${({label}) => (label ? 1 : 0)}; */
+// `;

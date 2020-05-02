@@ -5,4 +5,5 @@ export const Section = styled.SafeAreaView`
   height: 100%;
   align-items: center;
   justify-content: ${({justify}) => justify};
+  background-color: ${({theme}) => theme.red200};
 `;

@@ -6,7 +6,7 @@ const Input = ({...props}) => {
   console.log(props.label);
   return (
     <S.InputContainer>
-      <S.Label labelColor={props.labelColor}>{props.label}</S.Label>
+      {/* <S.Label labelColor={props.labelColor}>{props.label}</S.Label> */}
       <S.Input
         placeholder={props.placeholder}
         borderColor={props.borderColor}
@@ -18,8 +18,8 @@ const Input = ({...props}) => {
 };
 
 Input.defaultProps = {
-  borderColor: 'neutral500',
-  bgColor: 'white',
+  borderColor: 'ghost',
+  bgColor: 'neutral300',
   labelColor: 'neutral500',
   textColor: 'neutral500',
 };
