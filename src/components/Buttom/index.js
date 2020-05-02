@@ -10,7 +10,7 @@ const Buttom = ({color, text, textColor}) => {
 };
 
 Buttom.defaultProps = {
-  color: 'green500',
+  color: 'neutral500',
   textColor: 'white',
 };
 
