@@ -17,12 +17,12 @@ export const ButtonLink = styled.TouchableOpacity`
   margin-bottom: ${({mb}) => mb}px;
 `;
 
-export const TextButtomLink = styled.Text`
+export const TextButtonLink = styled.Text`
   font-size: 18px;
   color: ${({theme, textLinkColor}) => theme[textLinkColor]};
 `;
 
-export const TextButtom = styled.Text`
+export const TextButton = styled.Text`
   font-size: 18px;
   font-weight: 700;
   color: ${({theme, textColor}) => theme[textColor]};

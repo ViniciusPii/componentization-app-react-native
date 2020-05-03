@@ -8,11 +8,9 @@ import {baseColors} from './colors/baseColors';
 
 const App = () => {
   return (
-    <>
-      <ThemeProvider theme={baseColors}>
-        <Home />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={baseColors}>
+      <Home />
+    </ThemeProvider>
   );
 };
 

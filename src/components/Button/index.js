@@ -4,13 +4,13 @@ import * as S from './styles';
 
 import PropTypes from 'prop-types';
 
-const Buttom = ({...props}) => {
+const Button = ({...props}) => {
   if (props.type === 'link') {
     return (
       <S.ButtonLink onPress={props.onPress} mt={props.mt} mb={props.mb}>
-        <S.TextButtomLink textLinkColor={props.textLinkColor}>
+        <S.TextButtonLink textLinkColor={props.textLinkColor}>
           {props.text}
-        </S.TextButtomLink>
+        </S.TextButtonLink>
       </S.ButtonLink>
     );
   }
@@ -21,12 +21,12 @@ const Buttom = ({...props}) => {
       onPress={props.onPress}
       mt={props.mt}
       mb={props.mb}>
-      <S.TextButtom textColor={props.textColor}>{props.text}</S.TextButtom>
+      <S.TextButton textColor={props.textColor}>{props.text}</S.TextButton>
     </S.Button>
   );
 };
 
-Buttom.defaultProps = {
+Button.defaultProps = {
   color: 'neutral500',
   textColor: 'white',
   textLinkColor: 'neutral600',
@@ -34,9 +34,9 @@ Buttom.defaultProps = {
   mb: 20,
 };
 
-Buttom.propTypes = {
+Button.propTypes = {
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };
 
-export default Buttom;
+export default Button;
