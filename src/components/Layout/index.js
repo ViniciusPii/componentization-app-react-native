@@ -32,7 +32,7 @@ Layout.defaultProps = {
   bgColor: 'neutral100',
   color1: 'neutral500',
   color2: 'neutral100',
-  barColor: 'neutral300',
+  barColor: 'neutral100',
   barStyle: 'dark-content',
 };
 
