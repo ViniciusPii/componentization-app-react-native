@@ -1,9 +1,19 @@
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
+import {StatusBar} from 'react-native';
 
-export const Background = styled(LinearGradient).attrs({
-  colors: ['#f00', '#00f'],
-})`
+export const Status = styled(StatusBar).attrs(
+  ({theme, barColor, barStyle}) => ({
+    backgroundColor: theme[barColor],
+    barStyle: barStyle,
+  }),
+)``;
+
+export const Background = styled(LinearGradient).attrs(
+  ({theme, color1, color2}) => ({
+    colors: [theme[color1], theme[color2]],
+  }),
+)`
   flex: 1;
 `;
 
