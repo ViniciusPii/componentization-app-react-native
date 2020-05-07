@@ -1,6 +1,5 @@
 export const baseColors = {
   //Base
-
   aquaBlue: '#00dec3',
   aquaGreen: '#06FB87',
   black: '#000000',
@@ -16,7 +15,7 @@ export const baseColors = {
   pink: '#ff2d7a',
   purple: '#8634f2',
   purpleBlue: '#694DB5',
-  purpleMax: '#873590',
+  purpleRed: '#671973',
   red: '#f83333',
   violet: '#5700f8',
   white: '#ffffff',
@@ -35,7 +34,7 @@ export const baseColors = {
   whatsapp: '#4dc247',
   youtube: '#b00',
 
-  //Verde Água Azul
+  //Verde Água Azulado
   aquaBlue50: '#e6fcf8',
   aquaBlue100: '#b8f6eb',
   aquaBlue200: '#8af0df',
@@ -48,7 +47,7 @@ export const baseColors = {
   aquaBlue900: '#015043',
   aquaBlue950: '#00211c',
 
-  //Verde Água Verde
+  //Verde Água Esverdeado
   aquaGreen50: '#e6fff3',
   aquaGreen100: '#cdfee7',
   aquaGreen200: '#9bfdcf',
@@ -205,30 +204,30 @@ export const baseColors = {
   purple950: '#1b0a30',
 
   //Roxo Azulado
-  purpleBlue50: '#E3DEF1',
-  purpleBlue100: '#D6CEEA',
-  purpleBlue200: '#BAAEDD',
-  purpleBlue300: '#9F8DCF',
-  purpleBlue400: '#846DC2',
-  purpleBlue500: '#694DB5',
-  purpleBlue600: '#564095',
-  purpleBlue700: '#433274',
-  purpleBlue800: '#302353',
-  purpleBlue900: '#1D1532',
-  purpleBlue950: '#140E21',
+  purpleBlue50: '#f1eef9',
+  purpleBlue100: '#e3def3',
+  purpleBlue200: '#c6bde6',
+  purpleBlue300: '#aa9bda',
+  purpleBlue400: '#8d7acd',
+  purpleBlue500: '#7159c1',
+  purpleBlue600: '#5a479a',
+  purpleBlue700: '#443574',
+  purpleBlue800: '#2d244d',
+  purpleBlue900: '#171227',
+  purpleBlue950: '#0b0913',
 
-  //Roxo Intenso
-  purpleMax50: '#E9DAEA',
-  purpleMax100: '#DEC7E0',
-  purpleMax200: '#C8A3CC',
-  purpleMax300: '#B27EB8',
-  purpleMax400: '#9C59A4',
-  purpleMax500: '#873590',
-  purpleMax600: '#6F2C76',
-  purpleMax700: '#56225C',
-  purpleMax800: '#3E1942',
-  purpleMax900: '#250F28',
-  purpleMax950: '#190A1B',
+  //Roxo Avermelhado
+  purpleRed50: '#f0e8f1',
+  purpleRed100: '#e1d1e3',
+  purpleRed200: '#c2a3c7',
+  purpleRed300: '#a475ab',
+  purpleRed400: '#85478f',
+  purpleRed500: '#671973',
+  purpleRed600: '#52145c',
+  purpleRed700: '#3e0f45',
+  purpleRed800: '#290a2e',
+  purpleRed900: '#150517',
+  purpleRed950: '#0a020b',
 
   //Vermelho
   red50: '#ffe6e6',
