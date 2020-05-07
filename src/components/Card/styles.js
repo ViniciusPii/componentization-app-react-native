@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
 
 export const Card = styled.View`
-  width: ${({width}) => width}%;
-  height: ${({height}) => height}px;
+  width: ${({w}) => w}%;
+  height: ${({h}) => h}px;
   padding: 15px;
   margin-top: ${({mt}) => mt}px;
   margin-bottom: ${({mb}) => mb}px;

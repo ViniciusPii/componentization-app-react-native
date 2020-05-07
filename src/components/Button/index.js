@@ -17,7 +17,7 @@ const Button = ({...props}) => {
 
   return (
     <S.Button
-      color={props.color}
+      bgColor={props.bgColor}
       onPress={props.onPress}
       mt={props.mt}
       mb={props.mb}>
@@ -27,7 +27,7 @@ const Button = ({...props}) => {
 };
 
 Button.defaultProps = {
-  color: 'neutral500',
+  bgColor: 'neutral500',
   textColor: 'white',
   textLinkColor: 'neutral600',
   mt: 0,

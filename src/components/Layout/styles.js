@@ -2,6 +2,12 @@ import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {StatusBar} from 'react-native';
 
+export const Container = styled.View`
+  display: flex;
+  flex: 1;
+  align-items: center;
+`;
+
 export const Status = styled(StatusBar).attrs(
   ({theme, barColor, barStyle}) => ({
     backgroundColor: theme[barColor],
@@ -17,7 +23,7 @@ export const Background = styled(LinearGradient).attrs(
   flex: 1;
 `;
 
-export const Container = styled.SafeAreaView`
+export const Bla = styled.SafeAreaView`
   display: flex;
   flex: 1;
   align-items: center;
@@ -25,6 +31,7 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const Layout = styled.SafeAreaView`
+  width: ${({w}) => w}%;
   display: flex;
   flex: 1;
   align-items: center;

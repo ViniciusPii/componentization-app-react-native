@@ -18,12 +18,12 @@ const Layout = ({...props}) => {
   }
 
   return (
-    <>
+    <S.Container>
       <S.Status barColor={props.barColor} barStyle={props.barStyle} />
-      <S.Layout justify={props.justify} bgColor={props.bgColor}>
+      <S.Layout justify={props.justify} bgColor={props.bgColor} w={props.w}>
         {props.children}
       </S.Layout>
-    </>
+    </S.Container>
   );
 };
 
@@ -34,6 +34,7 @@ Layout.defaultProps = {
   color2: 'neutral100',
   barColor: 'neutral100',
   barStyle: 'dark-content',
+  w: '90',
 };
 
 export default Layout;

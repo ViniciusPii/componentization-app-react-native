@@ -8,8 +8,8 @@ const Card = ({...props}) => {
   return (
     <S.Card
       elevation={10}
-      width={props.width}
-      height={props.height}
+      w={props.w}
+      h={props.h}
       mt={props.mt}
       mb={props.mb}
       bgColor={props.bgColor}
@@ -21,8 +21,8 @@ const Card = ({...props}) => {
 Card.defaultProps = {
   bgColor: 'white',
   shadow: 'gray300',
-  width: '90',
-  height: '100',
+  w: '100',
+  h: '100',
   mt: 0,
   mb: 20,
 };

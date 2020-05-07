@@ -25,7 +25,7 @@ Input.defaultProps = {
   bgColor: 'placeholderNeutral',
   textColor: 'neutral700',
   mt: 0,
-  mb: 20,
+  mb: 15,
 };
 
 Input.propTypes = {
