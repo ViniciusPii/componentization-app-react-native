@@ -1,16 +1,17 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
 import {ThemeProvider} from 'styled-components';
-
-import Home from './views/Home';
-import Login from './views/Login';
-
 import {baseColors} from './colors/baseColors';
+
+import Routes from './routes';
 
 const App = () => {
   return (
     <ThemeProvider theme={baseColors}>
-      <Login />
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 };
