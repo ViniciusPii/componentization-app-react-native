@@ -1,15 +1,14 @@
 import styled from 'styled-components/native';
 
 export const Button = styled.TouchableOpacity`
-  display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 55px;
   margin-top: ${({mt}) => mt}px;
   margin-bottom: ${({mb}) => mb}px;
   background-color: ${({theme, bgColor}) => theme[bgColor]};
-  border-radius: 3px;
+  border-radius: 5px;
 `;
 
 export const ButtonLink = styled.TouchableOpacity`

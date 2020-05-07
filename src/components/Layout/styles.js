@@ -3,9 +3,9 @@ import LinearGradient from 'react-native-linear-gradient';
 import {StatusBar} from 'react-native';
 
 export const Container = styled.View`
-  display: flex;
   flex: 1;
   align-items: center;
+  background-color: ${({theme, bgColor}) => theme[bgColor]};
 `;
 
 export const Status = styled(StatusBar).attrs(
@@ -21,20 +21,12 @@ export const Background = styled(LinearGradient).attrs(
   }),
 )`
   flex: 1;
-`;
-
-export const Bla = styled.SafeAreaView`
-  display: flex;
-  flex: 1;
   align-items: center;
-  justify-content: ${({justify}) => justify};
 `;
 
 export const Layout = styled.SafeAreaView`
-  width: ${({w}) => w}%;
-  display: flex;
   flex: 1;
   align-items: center;
   justify-content: ${({justify}) => justify};
-  background-color: ${({theme, bgColor}) => theme[bgColor]};
+  width: ${({w}) => w}%;
 `;

@@ -1,7 +1,8 @@
 export const baseColors = {
   //Base
 
-  aqua: '#00dec3',
+  aquaBlue: '#00dec3',
+  aquaGreen: '#06FB87',
   black: '#000000',
   blue: '#006aff',
   brown: '#54341C',
@@ -9,6 +10,7 @@ export const baseColors = {
   crimson: '#FF0040',
   gray: '#868686',
   green: '#28A745',
+  lime: '#04EC0C',
   neutral: '#7e8aa4',
   orange: '#FF5720',
   pink: '#ff2d7a',
@@ -33,18 +35,31 @@ export const baseColors = {
   whatsapp: '#4dc247',
   youtube: '#b00',
 
-  //Verde Água
-  aqua50: '#e6fcf8',
-  aqua100: '#b8f6eb',
-  aqua200: '#8af0df',
-  aqua300: '#5cead2',
-  aqua400: '#2de4c6',
-  aqua500: '#00dec3',
-  aqua600: '#00bb9b',
-  aqua700: '#00977e',
-  aqua800: '#007360',
-  aqua900: '#015043',
-  aqua950: '#00211c',
+  //Verde Água Azul
+  aquaBlue50: '#e6fcf8',
+  aquaBlue100: '#b8f6eb',
+  aquaBlue200: '#8af0df',
+  aquaBlue300: '#5cead2',
+  aquaBlue400: '#2de4c6',
+  aquaBlue500: '#00dec3',
+  aquaBlue600: '#00bb9b',
+  aquaBlue700: '#00977e',
+  aquaBlue800: '#007360',
+  aquaBlue900: '#015043',
+  aquaBlue950: '#00211c',
+
+  //Verde Água Verde
+  aquaGreen50: '#e6fff3',
+  aquaGreen100: '#cdfee7',
+  aquaGreen200: '#9bfdcf',
+  aquaGreen300: '#6afdb7',
+  aquaGreen400: '#38fc9f',
+  aquaGreen500: '#06FB87',
+  aquaGreen600: '#05c96c',
+  aquaGreen700: '#049751',
+  aquaGreen800: '#026436',
+  aquaGreen900: '#01321b',
+  aquaGreen950: '#01190d',
 
   //Azul
   blue50: '#e6f0ff',
@@ -123,6 +138,19 @@ export const baseColors = {
   green800: '#115D24',
   green900: '#0C3D17',
   green950: '#071F0B',
+
+  //limão
+  lime50: '#e9ffe6',
+  lime100: '#d4ffcc',
+  lime200: '#a8ff99',
+  lime300: '#7dff66',
+  lime400: '#51ff33',
+  lime500: '#26ff00',
+  lime600: '#1ecc00',
+  lime700: '#179900',
+  lime800: '#0f6600',
+  lime900: '#083300',
+  lime950: '#041900',
 
   //Neutro
   neutral50: '#F3F4F6',

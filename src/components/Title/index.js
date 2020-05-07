@@ -14,7 +14,7 @@ const Title = ({...props}) => {
 
 Title.defaultProps = {
   color: 'neutral700',
-  mt: 20,
+  mt: 0,
   mb: 20,
 };
 

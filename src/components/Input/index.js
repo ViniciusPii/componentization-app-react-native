@@ -12,6 +12,7 @@ const Input = ({...props}) => {
       borderColor={props.borderColor}
       bgColor={props.bgColor}
       textColor={props.textColor}
+      placeholderTextColor={props.placeholderTextColor}
       value={props.value}
       onChangeText={props.onChangeText}
       mt={props.mt}
@@ -24,6 +25,7 @@ Input.defaultProps = {
   borderColor: 'ghost',
   bgColor: 'placeholderNeutral',
   textColor: 'neutral700',
+  placeholderTextColor: 'neutral500',
   mt: 0,
   mb: 15,
 };

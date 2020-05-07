@@ -11,16 +11,18 @@ const Layout = ({...props}) => {
           bgColor={props.bgColor}
           color1={props.color1}
           color2={props.color2}>
-          <S.Container justify={props.justify}>{props.children}</S.Container>
+          <S.Layout justify={props.justify} w={props.w}>
+            {props.children}
+          </S.Layout>
         </S.Background>
       </>
     );
   }
 
   return (
-    <S.Container>
+    <S.Container bgColor={props.bgColor}>
       <S.Status barColor={props.barColor} barStyle={props.barStyle} />
-      <S.Layout justify={props.justify} bgColor={props.bgColor} w={props.w}>
+      <S.Layout justify={props.justify} w={props.w}>
         {props.children}
       </S.Layout>
     </S.Container>
@@ -28,7 +30,7 @@ const Layout = ({...props}) => {
 };
 
 Layout.defaultProps = {
-  justify: 'center',
+  justify: 'flex-start',
   bgColor: 'neutral100',
   color1: 'neutral500',
   color2: 'neutral100',
