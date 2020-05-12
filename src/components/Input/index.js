@@ -17,6 +17,8 @@ const Input = ({...props}) => {
       onChangeText={props.onChangeText}
       mt={props.mt}
       mb={props.mb}
+      w={props.w}
+      h={props.h}
     />
   );
 };
@@ -28,6 +30,8 @@ Input.defaultProps = {
   placeholderTextColor: 'neutral500',
   mt: 0,
   mb: 15,
+  w: 100,
+  h: 55,
 };
 
 Input.propTypes = {

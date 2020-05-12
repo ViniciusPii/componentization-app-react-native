@@ -1,10 +1,10 @@
 import styled from 'styled-components/native';
 
 export const Button = styled.TouchableOpacity`
-  width: 100%;
+  width: ${({w}) => w}%;
+  height: ${({h}) => h}px;
   align-items: center;
   justify-content: center;
-  height: 55px;
   margin-top: ${({mt}) => mt}px;
   margin-bottom: ${({mb}) => mb}px;
   background-color: ${({theme, bgColor}) => theme[bgColor]};

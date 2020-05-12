@@ -20,7 +20,9 @@ const Button = ({...props}) => {
       bgColor={props.bgColor}
       onPress={props.onPress}
       mt={props.mt}
-      mb={props.mb}>
+      mb={props.mb}
+      w={props.w}
+      h={props.h}>
       <S.TextButton textColor={props.textColor}>{props.text}</S.TextButton>
     </S.Button>
   );
@@ -32,6 +34,8 @@ Button.defaultProps = {
   textLinkColor: 'neutral600',
   mt: 0,
   mb: 20,
+  w: 100,
+  h: 55,
 };
 
 Button.propTypes = {

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const Title = ({...props}) => {
   return (
-    <S.Title color={props.color} mt={props.mt} mb={props.mb}>
+    <S.Title color={props.color} mt={props.mt} mb={props.mb} fs={props.fs}>
       {props.title}
     </S.Title>
   );
@@ -16,6 +16,7 @@ Title.defaultProps = {
   color: 'neutral700',
   mt: 0,
   mb: 20,
+  fs: 24,
 };
 
 Title.protoTypes = {

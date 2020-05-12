@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const Text = ({...props}) => {
   return (
-    <S.Text color={props.color} mt={props.mt} mb={props.mb}>
+    <S.Text color={props.color} mt={props.mt} mb={props.mb} fs={props.fs}>
       {props.text}
     </S.Text>
   );
@@ -16,6 +16,7 @@ Text.defaultProps = {
   color: 'neutral600',
   mt: 0,
   mb: 20,
+  fs: 18,
 };
 
 Text.protoTypes = {
