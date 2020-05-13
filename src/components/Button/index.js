@@ -8,10 +8,10 @@ const Button = ({...props}) => {
   if (props.type === 'link') {
     return (
       <S.ButtonLink onPress={props.onPress} mt={props.mt} mb={props.mb}>
-        <S.TextButtonLink textLinkColor={props.textLinkColor}>
+        {props.children}
+        <S.TextButtonLink textLinkColor={props.textLinkColor} fs={props.fs}>
           {props.text}
         </S.TextButtonLink>
-        {props.children}
       </S.ButtonLink>
     );
   }
@@ -25,7 +25,9 @@ const Button = ({...props}) => {
       w={props.w}
       h={props.h}>
       {props.children}
-      <S.TextButton textColor={props.textColor}>{props.text}</S.TextButton>
+      <S.TextButton textColor={props.textColor} fs={props.fs}>
+        {props.text}
+      </S.TextButton>
     </S.Button>
   );
 };
@@ -38,6 +40,7 @@ Button.defaultProps = {
   mb: 20,
   w: 100,
   h: 55,
+  fs: 18,
 };
 
 Button.propTypes = {

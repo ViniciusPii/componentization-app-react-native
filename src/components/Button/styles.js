@@ -12,18 +12,18 @@ export const Button = styled.TouchableOpacity`
   border-radius: 5px;
 `;
 
+export const TextButton = styled.Text`
+  font-size: ${({fs}) => fs}px;
+  font-weight: 700;
+  color: ${({theme, textColor}) => theme[textColor]};
+`;
+
 export const ButtonLink = styled.TouchableOpacity`
   margin-top: ${({mt}) => mt}px;
   margin-bottom: ${({mb}) => mb}px;
 `;
 
 export const TextButtonLink = styled.Text`
-  font-size: 18px;
+  font-size: ${({fs}) => fs}px;
   color: ${({theme, textLinkColor}) => theme[textLinkColor]};
-`;
-
-export const TextButton = styled.Text`
-  font-size: 18px;
-  font-weight: 700;
-  color: ${({theme, textColor}) => theme[textColor]};
 `;

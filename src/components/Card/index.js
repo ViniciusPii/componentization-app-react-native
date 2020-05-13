@@ -21,8 +21,8 @@ const Card = ({...props}) => {
 Card.defaultProps = {
   bgColor: 'white',
   shadow: 'gray300',
-  w: '100',
-  h: '100',
+  w: 100,
+  h: 100,
   mt: 0,
   mb: 20,
 };

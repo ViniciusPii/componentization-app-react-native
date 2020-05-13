@@ -5,7 +5,6 @@ import * as S from './styles';
 import PropTypes from 'prop-types';
 
 const Input = ({...props}) => {
-  console.log(props.label);
   return (
     <S.Input
       placeholder={props.placeholder}
