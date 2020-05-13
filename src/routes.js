@@ -9,8 +9,8 @@ const Stack = createStackNavigator();
 const Routes = () => {
   return (
     <Stack.Navigator headerMode="none" screenOptions={{gestureEnabled: false}}>
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Login" component={Login} />
     </Stack.Navigator>
   );
 };

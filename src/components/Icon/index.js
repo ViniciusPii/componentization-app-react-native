@@ -1,0 +1,30 @@
+import React from 'react';
+import * as S from './styles';
+
+const Icon = ({...props}) => {
+  return (
+    <S.MyIcon
+      color={props.color}
+      name={props.name}
+      size={props.size}
+      mt={props.mt}
+      mb={props.mb}
+      mr={props.mr}
+      ml={props.ml}
+    />
+  );
+};
+
+Icon.defaultProps = {
+  size: 30,
+  color: 'neutral700',
+  name: 'emoticon-cool-outline',
+  mt: 0,
+  mb: 0,
+  mr: 0,
+  ml: 0,
+};
+
+export default Icon;
+
+//https://materialdesignicons.com/

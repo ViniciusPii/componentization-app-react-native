@@ -11,6 +11,7 @@ const Button = ({...props}) => {
         <S.TextButtonLink textLinkColor={props.textLinkColor}>
           {props.text}
         </S.TextButtonLink>
+        {props.children}
       </S.ButtonLink>
     );
   }
@@ -23,6 +24,7 @@ const Button = ({...props}) => {
       mb={props.mb}
       w={props.w}
       h={props.h}>
+      {props.children}
       <S.TextButton textColor={props.textColor}>{props.text}</S.TextButton>
     </S.Button>
   );

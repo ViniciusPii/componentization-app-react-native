@@ -5,6 +5,7 @@ export const Button = styled.TouchableOpacity`
   height: ${({h}) => h}px;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   margin-top: ${({mt}) => mt}px;
   margin-bottom: ${({mb}) => mb}px;
   background-color: ${({theme, bgColor}) => theme[bgColor]};
