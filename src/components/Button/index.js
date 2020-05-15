@@ -7,27 +7,17 @@ import PropTypes from 'prop-types';
 const Button = ({...props}) => {
   if (props.type === 'link') {
     return (
-      <S.ButtonLink onPress={props.onPress} mt={props.mt} mb={props.mb}>
+      <S.ButtonLink {...props}>
         {props.children}
-        <S.TextButtonLink textLinkColor={props.textLinkColor} fs={props.fs}>
-          {props.text}
-        </S.TextButtonLink>
+        <S.TextButtonLink {...props}>{props.text}</S.TextButtonLink>
       </S.ButtonLink>
     );
   }
 
   return (
-    <S.Button
-      bgColor={props.bgColor}
-      onPress={props.onPress}
-      mt={props.mt}
-      mb={props.mb}
-      w={props.w}
-      h={props.h}>
+    <S.Button {...props}>
       {props.children}
-      <S.TextButton textColor={props.textColor} fs={props.fs}>
-        {props.text}
-      </S.TextButton>
+      <S.TextButton {...props}>{props.text}</S.TextButton>
     </S.Button>
   );
 };

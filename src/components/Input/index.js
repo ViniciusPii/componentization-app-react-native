@@ -5,21 +5,7 @@ import * as S from './styles';
 import PropTypes from 'prop-types';
 
 const Input = ({...props}) => {
-  return (
-    <S.Input
-      placeholder={props.placeholder}
-      borderColor={props.borderColor}
-      bgColor={props.bgColor}
-      textColor={props.textColor}
-      placeholderTextColor={props.placeholderTextColor}
-      value={props.value}
-      onChangeText={props.onChangeText}
-      mt={props.mt}
-      mb={props.mb}
-      w={props.w}
-      h={props.h}
-    />
-  );
+  return <S.Input {...props} />;
 };
 
 Input.defaultProps = {

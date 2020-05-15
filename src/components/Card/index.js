@@ -5,17 +5,7 @@ import * as S from './styles';
 import PropTypes from 'prop-types';
 
 const Card = ({...props}) => {
-  return (
-    <S.Card
-      elevation={10}
-      w={props.w}
-      h={props.h}
-      mt={props.mt}
-      mb={props.mb}
-      bgColor={props.bgColor}
-      shadow={props.shadow}
-    />
-  );
+  return <S.Card {...props} />;
 };
 
 Card.defaultProps = {

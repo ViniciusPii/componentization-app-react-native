@@ -5,15 +5,11 @@ import * as S from './styles';
 import PropTypes from 'prop-types';
 
 const Title = ({...props}) => {
-  return (
-    <S.Title color={props.color} mt={props.mt} mb={props.mb} fs={props.fs}>
-      {props.title}
-    </S.Title>
-  );
+  return <S.Title {...props}>{props.title}</S.Title>;
 };
 
 Title.defaultProps = {
-  color: 'neutral700',
+  textColor: 'neutral700',
   mt: 0,
   mb: 20,
   fs: 24,

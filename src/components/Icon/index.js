@@ -2,17 +2,7 @@ import React from 'react';
 import * as S from './styles';
 
 const Icon = ({...props}) => {
-  return (
-    <S.MyIcon
-      color={props.color}
-      name={props.name}
-      size={props.size}
-      mt={props.mt}
-      mb={props.mb}
-      mr={props.mr}
-      ml={props.ml}
-    />
-  );
+  return <S.MyIcon {...props} />;
 };
 
 Icon.defaultProps = {

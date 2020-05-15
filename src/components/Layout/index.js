@@ -5,24 +5,17 @@ import * as S from './styles';
 const Layout = ({...props}) => {
   if (props.linear === 'gradient') {
     return (
-      <S.BackgroundGradient
-        bgColor={props.bgColor}
-        color1={props.color1}
-        color2={props.color2}>
-        <S.Status barColor={props.barColor} barStyle={props.barStyle} />
-        <S.Layout justify={props.justify} w={props.w}>
-          {props.children}
-        </S.Layout>
+      <S.BackgroundGradient {...props}>
+        <S.Status {...props} />
+        <S.Layout {...props}>{props.children}</S.Layout>
       </S.BackgroundGradient>
     );
   }
 
   return (
-    <S.Background bgColor={props.bgColor}>
-      <S.Status barColor={props.barColor} barStyle={props.barStyle} />
-      <S.Layout justify={props.justify} w={props.w}>
-        {props.children}
-      </S.Layout>
+    <S.Background {...props}>
+      <S.Status {...props} />
+      <S.Layout {...props}>{props.children}</S.Layout>
     </S.Background>
   );
 };
