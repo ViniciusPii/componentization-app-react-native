@@ -25,5 +25,5 @@ export const ButtonLink = styled.TouchableOpacity`
 
 export const TextButtonLink = styled.Text`
   font-size: ${({fs}) => fs}px;
-  color: ${({theme, textLinkColor}) => theme[textLinkColor]};
+  color: ${({theme, textColor}) => theme[textColor]};
 `;

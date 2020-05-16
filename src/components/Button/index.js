@@ -9,7 +9,9 @@ const Button = ({...props}) => {
     return (
       <S.ButtonLink {...props}>
         {props.children}
-        <S.TextButtonLink {...props}>{props.text}</S.TextButtonLink>
+        <S.TextButtonLink fs={props.fs} textColor={props.textColor}>
+          {props.text}
+        </S.TextButtonLink>
       </S.ButtonLink>
     );
   }
@@ -17,7 +19,9 @@ const Button = ({...props}) => {
   return (
     <S.Button {...props}>
       {props.children}
-      <S.TextButton {...props}>{props.text}</S.TextButton>
+      <S.TextButton fs={props.fs} textColor={props.textColor}>
+        {props.text}
+      </S.TextButton>
     </S.Button>
   );
 };
@@ -35,7 +39,6 @@ Button.defaultProps = {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  onPress: PropTypes.func.isRequired,
 };
 
 export default Button;
