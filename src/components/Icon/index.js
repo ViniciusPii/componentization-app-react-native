@@ -1,7 +1,9 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
 import * as S from './styles';
 
-const Icon = ({...props}) => {
+const Icon = ({ ...props }) => {
   return <S.MyIcon {...props} />;
 };
 
@@ -15,6 +17,16 @@ Icon.defaultProps = {
   ml: 0,
 };
 
+Icon.protoType = {
+  size: PropTypes.number,
+  color: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  mt: PropTypes.number,
+  mb: PropTypes.number,
+  mr: PropTypes.number,
+  ml: PropTypes.number,
+};
+
 export default Icon;
 
-//https://materialdesignicons.com/
+// https://materialdesignicons.com/

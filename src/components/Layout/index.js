@@ -1,21 +1,37 @@
 import React from 'react';
 
+import { Platform } from 'react-native';
+import PropTypes from 'prop-types';
 import * as S from './styles';
 
-const Layout = ({...props}) => {
-  if (props.linear === 'gradient') {
+const Layout = ({ ...props }) => {
+  const { linear, barColor, barStyle, bgColor, children } = props;
+
+  if (linear === 'gradient') {
     return (
       <S.BackgroundGradient {...props}>
-        <S.Status {...props} />
-        <S.Layout {...props}>{props.children}</S.Layout>
+        <S.Status barColor={barColor} barStyle={barStyle} />
+        <S.Layout
+          {...props}
+          enabled
+          behavior={Platform.OS === 'ios' ? 'padding' : ''}
+        >
+          {children}
+        </S.Layout>
       </S.BackgroundGradient>
     );
   }
 
   return (
-    <S.Background {...props}>
-      <S.Status {...props} />
-      <S.Layout {...props}>{props.children}</S.Layout>
+    <S.Background bgColor={bgColor}>
+      <S.Status barColor={barColor} barStyle={barStyle} />
+      <S.Layout
+        {...props}
+        enabled
+        behavior={Platform.OS === 'ios' ? 'padding' : ''}
+      >
+        {children}
+      </S.Layout>
     </S.Background>
   );
 };
@@ -28,6 +44,16 @@ Layout.defaultProps = {
   barColor: 'neutral100',
   barStyle: 'dark-content',
   w: 90,
+};
+
+Layout.propTypes = {
+  justify: PropTypes.string,
+  bgColor: PropTypes.string,
+  color1: PropTypes.string,
+  color2: PropTypes.string,
+  barColor: PropTypes.string,
+  barStyle: PropTypes.string,
+  w: PropTypes.number,
 };
 
 export default Layout;

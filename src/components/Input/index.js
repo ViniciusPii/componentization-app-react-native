@@ -1,10 +1,9 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
 import * as S from './styles';
 
-import PropTypes from 'prop-types';
-
-const Input = ({...props}) => {
+const Input = ({ ...props }) => {
   return <S.Input {...props} />;
 };
 
@@ -20,6 +19,14 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
+  borderColor: PropTypes.string,
+  bgColor: PropTypes.string,
+  textColor: PropTypes.string,
+  placeholderTextColor: PropTypes.string,
+  mt: PropTypes.number,
+  mb: PropTypes.number,
+  w: PropTypes.number,
+  h: PropTypes.number,
   placeholder: PropTypes.string.isRequired,
 };
 
