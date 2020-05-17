@@ -17,10 +17,10 @@ Icon.defaultProps = {
   ml: 0,
 };
 
-Icon.protoType = {
+Icon.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   mt: PropTypes.number,
   mb: PropTypes.number,
   mr: PropTypes.number,
