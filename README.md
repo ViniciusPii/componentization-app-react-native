@@ -13,7 +13,7 @@ Em breve...
  
 Todas alterações que o projeto sofrer, seja atualizações ou implementações novas, serão adicionadas em seu respectivo tópico.
  
-Components:
+### Components:
 - Criação de components genéricos onde as estilizações e funcionalidades são passadas por props:
   - Component Button
   - Component Card (Necessita refatoração)
@@ -24,15 +24,15 @@ Components:
   - Component Layout
   - Component Text
  
-Navegações:
+### Navegações:
 - Implementações de diferentes tipos de navegação dentro do projeto, utilizando React Navigation v5:
   - Stack navigation
  
-Fireabse:
+### Fireabse:
 - Implementações de diferentes métodos que o firebase possui:
   - Auth
  
-Gerenciamento de states:
+### Gerenciamento de states:
 - implementação de um gerenciador de states:
  
 ## Contato
