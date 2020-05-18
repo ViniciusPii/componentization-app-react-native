@@ -13,10 +13,10 @@ Text.defaultProps = {
   textColor: 'neutral700',
   align: 'center',
   fontStyle: 'normal',
-  bold: 700,
+  bold: 400,
   mt: 0,
   mb: 20,
-  fs: 24,
+  fs: 18,
 };
 
 Text.propTypes = {
