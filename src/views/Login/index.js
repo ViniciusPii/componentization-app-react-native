@@ -25,7 +25,6 @@ const Login = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        alert('Deu certo');
         setEmail('');
         setPassword('');
         setLoading(false);

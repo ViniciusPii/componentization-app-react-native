@@ -7,7 +7,7 @@ import CreateAccount from '../views/CreateAccount';
 
 const AuthStack = createStackNavigator();
 
-const Routes = () => {
+const AuthRoutes = () => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -37,4 +37,4 @@ const Routes = () => {
   );
 };
 
-export default Routes;
+export default AuthRoutes;
