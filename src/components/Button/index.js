@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import PropTypes from 'prop-types';
+import { ActivityIndicator } from 'react-native';
+
+import { ThemeContext } from 'styled-components';
 import * as S from './styles';
 
 const Button = ({ ...props }) => {
-  const { type, children, fs, textColor, text } = props;
+  const themeContext = useContext(ThemeContext);
+  const { type, children, fs, textColor, text, loading } = props;
 
   if (type === 'link') {
     return (
@@ -19,10 +23,14 @@ const Button = ({ ...props }) => {
 
   return (
     <S.Button {...props}>
+      {loading ? (
+        <ActivityIndicator color={themeContext.white} size="large" />
+      ) : (
+        <S.TextButton fs={fs} textColor={textColor}>
+          {text}
+        </S.TextButton>
+      )}
       {children}
-      <S.TextButton fs={fs} textColor={textColor}>
-        {text}
-      </S.TextButton>
     </S.Button>
   );
 };

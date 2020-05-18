@@ -9,7 +9,7 @@ const Icon = ({ ...props }) => {
 
 Icon.defaultProps = {
   size: 30,
-  color: 'neutral700',
+  color: 'neutral',
   name: 'emoticon-cool-outline',
   mt: 0,
   mb: 0,
