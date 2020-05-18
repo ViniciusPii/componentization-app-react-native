@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import Layout from '../../components/Layout';
 import Icon from '../../components/Icon';
@@ -7,23 +8,25 @@ import Button from '../../components/Button';
 import Container from '../../components/Container';
 
 const Login = () => {
+  const navigation = useNavigation();
+
+  const handleLogin = () => {
+    navigation.navigate('CreateAccount');
+  };
+
   return (
-    <Layout
-      justify="center"
-      bgColor="celeste950"
-      barColor="celeste950"
-      barStyle="light-content"
-    >
+    <Layout justify="center">
       <Container>
-        <Icon name="account-circle" size={75} color="orange500" mb={25} />
-        <Input placeholder="Nome" placeholderTextColor="orange300" />
-        <Input placeholder="Senha" placeholderTextColor="orange300" />
+        <Icon name="account-circle" size={75} mb={25} />
+        <Input placeholder="Nome" />
+        <Input placeholder="Senha" />
+        <Button text="Logar" mt={20} onPress={() => {}} />
         <Button
-          text="Logar"
-          bgColor="orange500"
-          textColor="celeste900"
-          mt={20}
-          onPress={() => {}}
+          type="link"
+          text="Crie sua conta!"
+          textColor="neutral600"
+          mt={10}
+          onPress={handleLogin}
         />
       </Container>
     </Layout>
