@@ -26,10 +26,14 @@ const Login = () => {
       .signInWithEmailAndPassword(email, password)
       .then(() => {
         alert('Deu certo');
+        setEmail('');
+        setPassword('');
         setLoading(false);
       })
       .catch(() => {
         alert('Ah não! Usuário ou Senha incorretos');
+        setEmail('');
+        setPassword('');
         setLoading(false);
       });
   };
