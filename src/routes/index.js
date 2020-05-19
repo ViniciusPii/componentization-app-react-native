@@ -1,37 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+// import { ActivityIndicator } from 'react-native';
 
-import { ActivityIndicator } from 'react-native';
-import firebase from '../services/firebase';
+import { AuthContext } from '../contexts/auth';
 
 import AuthRoutes from './auth.routes';
 import AppRoutes from './app.routes';
-import Layout from '../components/Layout';
+// import Layout from '../components/Layout';
 
 const Routes = () => {
-  const [sign, setSign] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const { signed } = useContext(AuthContext);
 
-  useEffect(() => {
-    setLoading(true);
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setSign(true);
-        setLoading(false);
-      } else {
-        setSign(false);
-      }
-    });
-  }, []);
+  // if (loading) {
+  //   return (
+  //     <Layout justify="center">
+  //       <ActivityIndicator size="large" />
+  //     </Layout>
+  //   );
+  // }
 
-  if (loading) {
-    return (
-      <Layout justify="center">
-        <ActivityIndicator size="large" />
-      </Layout>
-    );
-  }
-
-  return !sign ? <AuthRoutes /> : <AppRoutes />;
+  return !signed ? <AuthRoutes /> : <AppRoutes />;
 };
 
 export default Routes;

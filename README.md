@@ -34,6 +34,7 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
  
 ### Gerenciamento de states:
 - implementação de um gerenciador de states:
+  - ContextApi
  
 ## Contato
  

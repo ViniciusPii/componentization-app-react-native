@@ -1,9 +1,8 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-undef */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
-import { Keyboard } from 'react-native';
-import firebase from '../../services/firebase';
+import { AuthContext } from '../../contexts/auth';
 
 import Layout from '../../components/Layout';
 import Text from '../../components/Text';
@@ -12,53 +11,14 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 const CreateAccount = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
+  const { createAccount, loading } = useContext(AuthContext);
 
-  const handleCreateAccount = async () => {
-    setLoading(true);
+  const [name, setName] = useState('Pii');
+  const [email, setEmail] = useState('a@teste.com');
+  const [password, setPassword] = useState('123123');
 
-    await firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((res) => {
-        alert(`Cadastrado com sucesso o email ${res.user.email}`);
-        setLoading(false);
-        Keyboard.dismiss();
-      })
-      .catch((erro) => {
-        if (name === '' || email === '' || password === '') {
-          alert('Preencha todos os campos');
-          setLoading(false);
-          return;
-        }
-
-        switch (erro.message) {
-          case 'Password should be at least 6 characters':
-            alert('Sua senha deve ter no minimo 6 caracteres!');
-            break;
-
-          case 'The email address is already in use by another account.':
-            alert('Esse email já está sendo utilizado por outro usuário!');
-            break;
-
-          case 'The email address is badly formatted.':
-            alert('O formato do email não é válido!');
-            break;
-
-          default:
-            alert('Não foi possível cadastrar o Usuário');
-            break;
-        }
-        setLoading(false);
-        Keyboard.dismiss();
-      });
-
-    setName('');
-    setEmail('');
-    setPassword('');
+  const handleCreateAccount = () => {
+    createAccount(name, email, password);
   };
 
   return (

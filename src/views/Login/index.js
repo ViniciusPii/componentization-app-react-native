@@ -1,9 +1,9 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-undef */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import firebase from '../../services/firebase';
+import { AuthContext } from '../../contexts/auth';
 
 import Layout from '../../components/Layout';
 import Icon from '../../components/Icon';
@@ -13,28 +13,13 @@ import Container from '../../components/Container';
 
 const Login = () => {
   const navigation = useNavigation();
+  const { login, loading } = useContext(AuthContext);
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState('');
+  const [email, setEmail] = useState('a@teste.com');
+  const [password, setPassword] = useState('123123');
 
   const handleLogin = async () => {
-    setLoading(true);
-
-    await firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        setEmail('');
-        setPassword('');
-        setLoading(false);
-      })
-      .catch(() => {
-        alert('Ah não! Usuário ou Senha incorretos');
-        setEmail('');
-        setPassword('');
-        setLoading(false);
-      });
+    login(email, password);
   };
 
   return (
