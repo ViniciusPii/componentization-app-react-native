@@ -17,11 +17,13 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
 - Criação de components genéricos onde as estilizações e funcionalidades são passadas por props:
   - Component Button
   - Component Card (Necessita refatoração)
+  - Component Colors
   - Component Container
   - Component Icon
   - Component Img
   - Component Input
   - Component Layout
+  - Component Loading
   - Component Text
  
 ### Navegações:

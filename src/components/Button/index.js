@@ -1,20 +1,28 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import PropTypes from 'prop-types';
-import { ActivityIndicator } from 'react-native';
+import Loading from '../Loading';
 
-import { ThemeContext } from 'styled-components';
 import * as S from './styles';
 
 const Button = ({ ...props }) => {
-  const themeContext = useContext(ThemeContext);
-  const { type, children, fs, textColor, text, loading } = props;
+  const {
+    type,
+    children,
+    fs,
+    textColor,
+    text,
+    loading,
+    loadingColor,
+    loadingSize,
+    bold,
+  } = props;
 
   if (type === 'link') {
     return (
       <S.ButtonLink {...props}>
         {children}
-        <S.TextButtonLink fs={fs} textColor={textColor}>
+        <S.TextButtonLink fs={fs} textColor={textColor} bold={bold}>
           {text}
         </S.TextButtonLink>
       </S.ButtonLink>
@@ -24,37 +32,39 @@ const Button = ({ ...props }) => {
   return (
     <S.Button {...props}>
       {loading ? (
-        <ActivityIndicator color={themeContext.white} size="large" />
+        <Loading loadingColor={loadingColor} loadingSize={loadingSize} />
       ) : (
-        <S.TextButton fs={fs} textColor={textColor}>
-          {text}
-        </S.TextButton>
+        <>
+          {children}
+          <S.TextButton fs={fs} textColor={textColor} bold={bold}>
+            {text}
+          </S.TextButton>
+        </>
       )}
-      {children}
     </S.Button>
   );
 };
 
 Button.defaultProps = {
-  bgColor: 'neutral500',
+  bgColor: 'neutral',
   textColor: 'white',
-  textLinkColor: 'neutral600',
   mt: 0,
   mb: 20,
   w: 100,
   h: 55,
   fs: 18,
+  bold: 700,
 };
 
 Button.propTypes = {
   bgColor: PropTypes.string,
   textColor: PropTypes.string,
-  textLinkColor: PropTypes.string,
   mt: PropTypes.number,
   mb: PropTypes.number,
   w: PropTypes.number,
   h: PropTypes.number,
   fs: PropTypes.number,
+  bold: PropTypes.number,
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };

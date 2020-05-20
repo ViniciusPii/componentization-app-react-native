@@ -6,6 +6,7 @@ import Icon from './Icon';
 import Img from './Img';
 import Input from './Input';
 import Layout from './Layout';
+import Loading from './Loading';
 import Text from './Text';
 
 export {
@@ -17,5 +18,6 @@ export {
   Img,
   Input,
   Layout,
+  Loading,
   Text,
 };

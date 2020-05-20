@@ -39,7 +39,7 @@ const Layout = ({ ...props }) => {
 Layout.defaultProps = {
   justify: 'flex-start',
   bgColor: 'neutral100',
-  color1: 'neutral500',
+  color1: 'neutral',
   color2: 'neutral100',
   barColor: 'neutral100',
   barStyle: 'dark-content',

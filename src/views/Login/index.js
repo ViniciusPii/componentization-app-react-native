@@ -13,9 +13,15 @@ const Login = () => {
 
   const [email, setEmail] = useState('a@teste.com');
   const [password, setPassword] = useState('123123');
+  // const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
     login(email, password);
+
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 2000);
   };
 
   return (

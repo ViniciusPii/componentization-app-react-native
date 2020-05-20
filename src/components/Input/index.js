@@ -11,7 +11,7 @@ Input.defaultProps = {
   borderColor: 'ghost',
   bgColor: 'placeholderNeutral',
   textColor: 'neutral700',
-  placeholderTextColor: 'neutral500',
+  placeholderTextColor: 'neutral',
   mt: 0,
   mb: 15,
   w: 100,

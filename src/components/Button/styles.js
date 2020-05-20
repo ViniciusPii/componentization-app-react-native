@@ -14,7 +14,7 @@ export const Button = styled.TouchableOpacity`
 
 export const TextButton = styled.Text`
   font-size: ${({ fs }) => fs}px;
-  font-weight: 700;
+  font-weight: ${({ bold }) => bold};
   color: ${({ theme, textColor }) => theme[textColor]};
 `;
 

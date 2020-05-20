@@ -10,7 +10,7 @@ const Text = ({ ...props }) => {
 };
 
 Text.defaultProps = {
-  textColor: 'neutral700',
+  textColor: 'neutral600',
   align: 'center',
   fontStyle: 'normal',
   bold: 400,
