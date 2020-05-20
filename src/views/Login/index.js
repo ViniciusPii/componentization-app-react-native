@@ -5,11 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { AuthContext } from '../../contexts/auth';
 
-import Layout from '../../components/Layout';
-import Icon from '../../components/Icon';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
-import Container from '../../components/Container';
+import { Layout, Container, Icon, Input, Button } from '../../components';
 
 const Login = () => {
   const navigation = useNavigation();

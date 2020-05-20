@@ -1,5 +1,5 @@
-export const baseColors = {
-  //Base
+const colors = {
+  // Base
   aquaBlue: '#00dec3',
   aquaGreen: '#06FB87',
   black: '#000000',
@@ -21,12 +21,12 @@ export const baseColors = {
   white: '#ffffff',
   yellow: '#ffc02a',
 
-  //Outros
+  // Outros
   ghost: 'transparent',
   placeholder: '#E5E5E5',
   placeholderNeutral: '#d8e1ee',
 
-  //Redes Sociais
+  // Redes Sociais
   facebook: '#4064AD',
   instagram: '#8a3ab9',
   linkedin: '#0079b8',
@@ -34,7 +34,7 @@ export const baseColors = {
   whatsapp: '#4dc247',
   youtube: '#b00',
 
-  //Verde Água Azulado
+  // Verde Água Azulado
   aquaBlue50: '#e6fcf8',
   aquaBlue100: '#b8f6eb',
   aquaBlue200: '#8af0df',
@@ -47,7 +47,7 @@ export const baseColors = {
   aquaBlue900: '#015043',
   aquaBlue950: '#00211c',
 
-  //Verde Água Esverdeado
+  // Verde Água Esverdeado
   aquaGreen50: '#e6fff3',
   aquaGreen100: '#cdfee7',
   aquaGreen200: '#9bfdcf',
@@ -60,7 +60,7 @@ export const baseColors = {
   aquaGreen900: '#01321b',
   aquaGreen950: '#01190d',
 
-  //Azul
+  // Azul
   blue50: '#e6f0ff',
   blue100: '#b8d5ff',
   blue200: '#8abbff',
@@ -73,7 +73,7 @@ export const baseColors = {
   blue900: '#102136',
   blue950: '#080c11',
 
-  //Marrom
+  // Marrom
   brown50: '#EFECEA',
   brown100: '#D0C7C1',
   brown200: '#B1A297',
@@ -86,7 +86,7 @@ export const baseColors = {
   brown900: '#170F08',
   brown950: '#080503',
 
-  //Azul Claro
+  // Azul Claro
   celeste50: '#e6faff',
   celeste100: '#b8f0ff',
   celeste200: '#8ae5ff',
@@ -99,7 +99,7 @@ export const baseColors = {
   celeste900: '#003447',
   celeste950: '#00121a',
 
-  //Carmin
+  // Carmin
   crimson50: '#FFD0DC',
   crimson100: '#FFB9CA',
   crimson200: '#FF8BA8',
@@ -112,7 +112,7 @@ export const baseColors = {
   crimson900: '#460012',
   crimson950: '#2F000C',
 
-  //Cinza
+  // Cinza
   gray50: '#F4F4F4',
   gray100: '#DEDEDE',
   gray200: '#C8C8C8',
@@ -125,7 +125,7 @@ export const baseColors = {
   gray900: '#252525',
   gray950: '#0D0D0D',
 
-  //Verde
+  // Verde
   green50: '#ECF8EE',
   green100: '#C3E9CB',
   green200: '#9BD8AA',
@@ -138,7 +138,7 @@ export const baseColors = {
   green900: '#0C3D17',
   green950: '#071F0B',
 
-  //limão
+  // limão
   lime50: '#e9ffe6',
   lime100: '#d4ffcc',
   lime200: '#a8ff99',
@@ -151,7 +151,7 @@ export const baseColors = {
   lime900: '#083300',
   lime950: '#041900',
 
-  //Neutro
+  // Neutro
   neutral50: '#F3F4F6',
   neutral100: '#f7f9fc',
   neutral200: '#edf1f7',
@@ -164,7 +164,7 @@ export const baseColors = {
   neutral900: '#1e232c',
   neutral950: '#0b0c10',
 
-  //Laranja
+  // Laranja
   orange50: '#FFEFEB',
   orange100: '#FFD1C2',
   orange200: '#FFB298',
@@ -177,7 +177,7 @@ export const baseColors = {
   orange900: '#5E1F06',
   orange950: '#471706',
 
-  //Rosa
+  // Rosa
   pink50: '#ffeaf2',
   pink100: '#ffc4da',
   pink200: '#ff9ec2',
@@ -190,7 +190,7 @@ export const baseColors = {
   pink900: '#5c0012',
   pink950: '#330005',
 
-  //Roxo
+  // Roxo
   purple50: '#f3ebfe',
   purple100: '#ddc6fb',
   purple200: '#c6a2f9',
@@ -203,7 +203,7 @@ export const baseColors = {
   purple900: '#301357',
   purple950: '#1b0a30',
 
-  //Roxo Azulado
+  // Roxo Azulado
   purpleBlue50: '#f1eef9',
   purpleBlue100: '#e3def3',
   purpleBlue200: '#c6bde6',
@@ -216,7 +216,7 @@ export const baseColors = {
   purpleBlue900: '#171227',
   purpleBlue950: '#0b0913',
 
-  //Roxo Avermelhado
+  // Roxo Avermelhado
   purpleRed50: '#f0e8f1',
   purpleRed100: '#e1d1e3',
   purpleRed200: '#c2a3c7',
@@ -229,7 +229,7 @@ export const baseColors = {
   purpleRed900: '#150517',
   purpleRed950: '#0a020b',
 
-  //Vermelho
+  // Vermelho
   red50: '#ffe6e6',
   red100: '#ffbbbb',
   red200: '#ff9494',
@@ -242,7 +242,7 @@ export const baseColors = {
   red900: '#5c0000',
   red950: '#330000',
 
-  //Violeta
+  // Violeta
   violet50: '#e6e6ff',
   violet100: '#b8b8ff',
   violet200: '#958aff',
@@ -255,7 +255,7 @@ export const baseColors = {
   violet900: '#180045',
   violet950: '#090019',
 
-  //Amarelo
+  // Amarelo
   yellow50: '#FFFAEB',
   yellow100: '#FFEFC2',
   yellow200: '#FFE39A',
@@ -268,3 +268,5 @@ export const baseColors = {
   yellow900: '#5E4607',
   yellow950: '#2F2304',
 };
+
+export default colors;

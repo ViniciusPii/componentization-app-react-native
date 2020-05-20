@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Layout from '../../components/Layout';
-import Button from '../../components/Button';
-import Text from '../../components/Text';
+import { Layout, Text, Button } from '../../components';
 
 const Home = () => {
   const handleLogOff = () => {};

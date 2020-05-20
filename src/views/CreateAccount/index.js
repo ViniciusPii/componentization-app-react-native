@@ -4,11 +4,7 @@ import React, { useState, useContext } from 'react';
 
 import { AuthContext } from '../../contexts/auth';
 
-import Layout from '../../components/Layout';
-import Text from '../../components/Text';
-import Container from '../../components/Container';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
+import { Layout, Container, Text, Input, Button } from '../../components';
 
 const CreateAccount = () => {
   const { createAccount, loading } = useContext(AuthContext);
