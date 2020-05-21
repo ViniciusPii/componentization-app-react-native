@@ -10,6 +10,7 @@ export const AuthContext = createContext({});
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [dataModal, setDataModal] = useState({ visible: false });
 
   const createAccount = (name, email, password) => {
     setLoading(true);
@@ -33,9 +34,13 @@ const AuthProvider = ({ children }) => {
             };
             setUser(data);
           });
-
-        alert(`Cadastrado com sucesso o email ${res.user.email}`);
         setLoading(false);
+        setDataModal({
+          type: 'success',
+          text: 'Cadastrado com sucesso!',
+          visible: true,
+        });
+
         Keyboard.dismiss();
       })
       .catch((erro) => {
@@ -91,14 +96,18 @@ const AuthProvider = ({ children }) => {
           });
       })
       .catch(() => {
-        alert('Ah não! Usuário ou Senha incorretos');
         setLoading(false);
+        setDataModal({
+          text: 'Ah não! Usuário ou senha incorretos!',
+          type: 'error',
+          visible: true,
+        });
       });
   };
 
   return (
     <AuthContext.Provider
-      value={{ signed: !!user, user, loading, createAccount, login }}
+      value={{ signed: !!user, user, loading, dataModal, createAccount, login }}
     >
       {children}
     </AuthContext.Provider>

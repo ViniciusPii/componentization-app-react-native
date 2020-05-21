@@ -4,11 +4,18 @@ import React, { useState, useContext } from 'react';
 
 import { AuthContext } from '../../contexts/auth';
 
-import { Layout, Container, Text, Input, Button } from '../../components';
+import {
+  Layout,
+  Container,
+  Text,
+  Input,
+  Button,
+  ModalError,
+} from '../../components';
 
 const CreateAccount = () => {
-  const { createAccount, loading } = useContext(AuthContext);
-
+  const { createAccount, loading, dataModal } = useContext(AuthContext);
+  const { type, text, visible } = dataModal;
   const [name, setName] = useState('Pii');
   const [email, setEmail] = useState('a@teste.com');
   const [password, setPassword] = useState('123123');
@@ -19,6 +26,7 @@ const CreateAccount = () => {
 
   return (
     <Layout justify="center">
+      <ModalError type={type} text={text} visible={visible} />
       <Container>
         <Text text="É rapidinho :)" />
         <Input

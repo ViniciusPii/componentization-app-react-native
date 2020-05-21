@@ -5,15 +5,22 @@ import { useNavigation } from '@react-navigation/native';
 
 import { AuthContext } from '../../contexts/auth';
 
-import { Layout, Container, Icon, Input, Button } from '../../components';
+import {
+  Layout,
+  Container,
+  Icon,
+  Input,
+  Button,
+  ModalError,
+} from '../../components';
 
 const Login = () => {
   const navigation = useNavigation();
-  const { login, loading } = useContext(AuthContext);
-
-  const [email, setEmail] = useState('a@teste.com');
+  const { login, loading, dataModal } = useContext(AuthContext);
+  const { type, text, visible } = dataModal;
+  const [email, setEmail] = useState('b@teste.com');
   const [password, setPassword] = useState('123123');
-  // const [loading, setLoading] = useState(false);
+  // const [teste, setTeste] = useState(true);
 
   const handleLogin = async () => {
     login(email, password);
@@ -27,6 +34,7 @@ const Login = () => {
   return (
     <Layout justify="center">
       <Container>
+        <ModalError type={type} text={text} visible={visible} />
         <Icon name="account-circle" size={75} mb={25} />
         <Input
           placeholder="Email"

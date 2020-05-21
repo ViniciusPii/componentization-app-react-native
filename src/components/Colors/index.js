@@ -25,6 +25,7 @@ const colors = {
   ghost: 'transparent',
   placeholder: '#E5E5E5',
   placeholderNeutral: '#d8e1ee',
+  blackOpacity: '#00000033',
 
   // Redes Sociais
   facebook: '#4064AD',
