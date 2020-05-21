@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  width: ${({ w }) => w}%;
+  width: ${({ w }) => w};
   justify-content: ${({ justify }) => justify};
   align-items: ${({ align }) => align};
   flex-direction: ${({ orientation }) => orientation};

@@ -26,7 +26,7 @@ export const Status = styled(StatusBar).attrs(
 
 export const Layout = styled.KeyboardAvoidingView`
   flex: 1;
-  width: ${({ w }) => w}%;
+  width: ${({ w }) => w};
   align-items: center;
   justify-content: ${({ justify }) => justify};
 `;

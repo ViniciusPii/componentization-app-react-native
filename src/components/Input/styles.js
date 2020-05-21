@@ -5,7 +5,7 @@ export const Input = styled.TextInput.attrs(
     placeholderTextColor: theme[placeholderTextColor],
   })
 )`
-  width: ${({ w }) => w}%;
+  width: ${({ w }) => w};
   height: ${({ h }) => h}px;
   padding-left: 10px;
   margin-top: ${({ mt }) => mt}px;

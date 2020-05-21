@@ -15,7 +15,7 @@ Input.defaultProps = {
   placeholderTextColor: 'neutral',
   mt: 0,
   mb: 15,
-  w: 100,
+  w: '100%',
   h: 55,
 };
 
@@ -26,7 +26,7 @@ Input.propTypes = {
   placeholderTextColor: PropTypes.string,
   mt: PropTypes.number,
   mb: PropTypes.number,
-  w: PropTypes.number,
+  w: PropTypes.string,
   h: PropTypes.number,
   placeholder: PropTypes.string.isRequired,
 };

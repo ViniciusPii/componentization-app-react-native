@@ -44,7 +44,7 @@ Layout.defaultProps = {
   color2: 'neutral100',
   barColor: 'neutral100',
   barStyle: 'dark-content',
-  w: 90,
+  w: '90%',
 };
 
 Layout.propTypes = {
@@ -54,7 +54,7 @@ Layout.propTypes = {
   color2: PropTypes.string,
   barColor: PropTypes.string,
   barStyle: PropTypes.string,
-  w: PropTypes.number,
+  w: PropTypes.string,
 };
 
 export default Layout;
