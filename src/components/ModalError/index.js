@@ -10,32 +10,37 @@ import Text from '../Text';
 
 const ModalError = ({ ...props }) => {
   const { type, text, visible } = props;
+
   const [name, setName] = useState('home');
   const [color, setColor] = useState('neutral');
-  const [bgColor, setBgColor] = useState('neutral');
   const [title, setTitle] = useState('Modal');
 
-  console.log(visible);
-
-  useEffect(() => {
-    const changeModal = () => {
-      if (type === 'success') {
+  const changeModal = () => {
+    switch (type) {
+      case 'success':
         setName('check-circle-outline');
         setColor('green');
-        setBgColor('green');
         setTitle('Sucesso!');
-      } else if (type === 'error') {
+        break;
+      case 'error':
         setName('close-circle-outline');
         setColor('red');
-        setBgColor('red');
         setTitle('Ops!');
-      } else if (type === 'warning') {
+        break;
+      case 'warning':
         setName('alert-circle-outline');
         setColor('yellow');
-        setBgColor('yellow');
         setTitle('Atenção!');
-      }
-    };
+        break;
+      default:
+        setName('alert-circle-outline');
+        setColor('yellow');
+        setTitle('Atenção!');
+        break;
+    }
+  };
+
+  useEffect(() => {
     changeModal();
   }, [type]);
 
@@ -45,8 +50,8 @@ const ModalError = ({ ...props }) => {
         <S.ModalContent>
           <Icon name={name} color={color} size={45} />
           <Text text={title} fs={28} />
-          <Text text={text} />
-          <Button text="Ok" onPress={() => {}} mb={0} bgColor={bgColor} />
+          <Text text={text} fs={20} mb={30} />
+          <Button text="Ok" onPress={() => {}} mb={0} bgColor={color} />
         </S.ModalContent>
       </S.ModalContainer>
     </S.Modal>

@@ -5,15 +5,12 @@ import { ThemeProvider } from 'styled-components';
 import { Colors } from './components';
 
 import Routes from './routes';
-import AuthProvider from './contexts/auth';
 
 const App = () => {
   return (
     <ThemeProvider theme={Colors}>
       <NavigationContainer>
-        <AuthProvider>
-          <Routes />
-        </AuthProvider>
+        <Routes />
       </NavigationContainer>
     </ThemeProvider>
   );

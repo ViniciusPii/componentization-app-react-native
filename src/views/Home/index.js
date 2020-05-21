@@ -1,9 +1,13 @@
 import React from 'react';
 
+import firebase from '../../services/firebase';
+
 import { Layout, Text, Button } from '../../components';
 
 const Home = () => {
-  const handleLogOff = () => {};
+  const handleLogOff = () => {
+    firebase.auth().signOut();
+  };
 
   return (
     <Layout>

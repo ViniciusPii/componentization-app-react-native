@@ -1,9 +1,10 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import Loading from '../Loading';
 
 import * as S from './styles';
+
+import Loading from '../Loading';
 
 const Button = ({ ...props }) => {
   const {

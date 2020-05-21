@@ -11,11 +11,11 @@ export const ModalContainer = styled.View`
 `;
 
 export const ModalContent = styled.View`
-  justify-content: center;
-  align-items: center;
   width: 80%;
-  height: 250px;
-  padding: 20px;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.white};
 `;

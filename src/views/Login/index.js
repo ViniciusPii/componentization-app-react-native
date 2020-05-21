@@ -1,9 +1,9 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-undef */
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { AuthContext } from '../../contexts/auth';
+import firebase from '../../services/firebase';
 
 import {
   Layout,
@@ -16,25 +16,40 @@ import {
 
 const Login = () => {
   const navigation = useNavigation();
-  const { login, loading, dataModal } = useContext(AuthContext);
-  const { type, text, visible } = dataModal;
-  const [email, setEmail] = useState('b@teste.com');
+
+  const [email, setEmail] = useState('c@teste.com');
   const [password, setPassword] = useState('123123');
-  // const [teste, setTeste] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [dataModal, setDataModal] = useState({ visible: false });
 
   const handleLogin = async () => {
-    login(email, password);
+    setLoading(true);
 
-    // setLoading(true);
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 2000);
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        alert('Logado com sucesso');
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
+        setDataModal({
+          type: 'error',
+          text: 'Ah não usuário ou senha inválidos!',
+          visible: true,
+        });
+      });
   };
 
   return (
     <Layout justify="center">
+      <ModalError
+        type={dataModal.type}
+        text={dataModal.text}
+        visible={dataModal.visible}
+      />
       <Container>
-        <ModalError type={type} text={text} visible={visible} />
         <Icon name="account-circle" size={75} mb={25} />
         <Input
           placeholder="Email"
