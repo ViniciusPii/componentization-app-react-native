@@ -9,13 +9,3 @@ export const ModalContainer = styled.View`
   align-items: center;
   background-color: ${({ theme }) => theme.blackOpacity};
 `;
-
-export const ModalContent = styled.View`
-  width: 80%;
-  height: auto;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: ${({ theme }) => theme.white};
-`;

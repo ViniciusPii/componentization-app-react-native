@@ -7,6 +7,7 @@ import * as S from './styles';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
+import Container from '../Container';
 
 const ModalError = ({ ...props }) => {
   const { type, text, visible } = props;
@@ -47,12 +48,12 @@ const ModalError = ({ ...props }) => {
   return (
     <S.Modal type={type} animationType="slide" transparent visible={visible}>
       <S.ModalContainer>
-        <S.ModalContent>
+        <Container bgColor="white" w="80%" p={15}>
           <Icon name={name} color={color} size={45} />
           <Text text={title} fs={28} />
           <Text text={text} fs={20} mb={30} />
           <Button text="Ok" onPress={() => {}} mb={0} bgColor={color} />
-        </S.ModalContent>
+        </Container>
       </S.ModalContainer>
     </S.Modal>
   );
