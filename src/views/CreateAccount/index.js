@@ -11,7 +11,7 @@ import {
   Text,
   Input,
   Button,
-  ModalError,
+  Alert,
 } from '../../components';
 
 const CreateAccount = () => {
@@ -42,6 +42,7 @@ const CreateAccount = () => {
             text: 'Preencha todos os campos!',
             visible: true,
           });
+
           setLoading(false);
           Keyboard.dismiss();
           return;
@@ -71,10 +72,11 @@ const CreateAccount = () => {
 
   return (
     <Layout justify="center">
-      <ModalError
+      <Alert
         type={dataModal.type}
         text={dataModal.text}
         visible={dataModal.visible}
+        handleVisible={() => setDataModal({ visible: false })}
       />
       <Container>
         <Text text="É rapidinho :)" />

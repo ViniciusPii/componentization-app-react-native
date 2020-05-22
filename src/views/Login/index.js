@@ -11,7 +11,7 @@ import {
   Icon,
   Input,
   Button,
-  ModalError,
+  Alert,
 } from '../../components';
 
 const Login = () => {
@@ -44,10 +44,11 @@ const Login = () => {
 
   return (
     <Layout justify="center">
-      <ModalError
+      <Alert
         type={dataModal.type}
         text={dataModal.text}
         visible={dataModal.visible}
+        handleVisible={() => setDataModal({ visible: false })}
       />
       <Container>
         <Icon name="account-circle" size={75} mb={25} />

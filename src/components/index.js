@@ -1,4 +1,4 @@
-import colors from './Colors';
+import AppProvider from './AppProvider';
 import Button from './Button';
 import Card from './Card';
 import Container from './Container';
@@ -7,11 +7,11 @@ import Img from './Img';
 import Input from './Input';
 import Layout from './Layout';
 import Loading from './Loading';
-import ModalError from './ModalError';
+import Alert from './Alert';
 import Text from './Text';
 
 export {
-  colors as Colors,
+  AppProvider,
   Button,
   Card,
   Container,
@@ -20,6 +20,6 @@ export {
   Input,
   Layout,
   Loading,
-  ModalError,
+  Alert,
   Text,
 };

@@ -9,8 +9,8 @@ import Icon from '../Icon';
 import Text from '../Text';
 import Container from '../Container';
 
-const ModalError = ({ ...props }) => {
-  const { type, text, visible } = props;
+const Alert = ({ ...props }) => {
+  const { type, text, visible, handleVisible } = props;
 
   const [name, setName] = useState('home');
   const [color, setColor] = useState('neutral');
@@ -46,27 +46,27 @@ const ModalError = ({ ...props }) => {
   }, [type]);
 
   return (
-    <S.Modal type={type} animationType="slide" transparent visible={visible}>
+    <S.Modal type={type} animationType="fade" transparent visible={visible}>
       <S.ModalContainer>
         <Container bgColor="white" w="80%" p={15}>
           <Icon name={name} color={color} size={45} />
           <Text text={title} fs={28} />
           <Text text={text} fs={20} mb={30} />
-          <Button text="Ok" onPress={() => {}} mb={0} bgColor={color} />
+          <Button text="Ok" onPress={handleVisible} mb={0} bgColor={color} />
         </Container>
       </S.ModalContainer>
     </S.Modal>
   );
 };
 
-ModalError.defaultProps = {
+Alert.defaultProps = {
   type: 'none',
   text: 'Modal',
 };
 
-ModalError.propTypes = {
+Alert.propTypes = {
   type: PropTypes.string,
   text: PropTypes.string,
 };
 
-export default ModalError;
+export default Alert;
