@@ -15,9 +15,10 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
  
 ### Components:
 - Criação de components genéricos onde as estilizações e funcionalidades são passadas por props:
+  - Component Alert
+  - Component AppProvider
   - Component Button
   - Component Card (Necessita refatoração)
-  - Component Colors
   - Component Container
   - Component Icon
   - Component Img
@@ -25,6 +26,8 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
   - Component Layout
   - Component Loading
   - Component Text
+
+  - Component Colors substituído por um theme que pode ser personalizado.
  
 ### Navegações:
 - Implementações de diferentes tipos de navegação dentro do projeto, utilizando React Navigation v5:

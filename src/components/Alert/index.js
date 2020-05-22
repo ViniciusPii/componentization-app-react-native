@@ -59,14 +59,11 @@ const Alert = ({ ...props }) => {
   );
 };
 
-Alert.defaultProps = {
-  type: 'none',
-  text: 'Modal',
-};
-
 Alert.propTypes = {
-  type: PropTypes.string,
-  text: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  visible: PropTypes.bool.isRequired,
+  handleVisible: PropTypes.func.isRequired,
 };
 
 export default Alert;
