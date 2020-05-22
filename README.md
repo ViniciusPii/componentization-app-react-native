@@ -36,6 +36,8 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
 ### Fireabse:
 - Implementações de diferentes métodos que o firebase possui:
   - Auth
+  - CRUD
+    - Create Database
  
 ### Gerenciamento de states:
 - implementação de um gerenciador de states:

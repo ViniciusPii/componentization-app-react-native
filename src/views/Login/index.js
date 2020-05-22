@@ -17,24 +17,33 @@ import {
 const Login = () => {
   const navigation = useNavigation();
 
-  const [email, setEmail] = useState('c@teste.com');
-  const [password, setPassword] = useState('123123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [dataModal, setDataModal] = useState({ visible: false });
+  const [alert, setAlert] = useState({});
 
   const handleLogin = async () => {
     setLoading(true);
+
+    if (email === '' || password === '') {
+      setLoading(false);
+      setAlert({
+        type: 'warning',
+        text: 'Preencha todos os campos!',
+        visible: true,
+      });
+      return;
+    }
 
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        alert('Logado com sucesso');
         setLoading(false);
       })
       .catch(() => {
         setLoading(false);
-        setDataModal({
+        setAlert({
           type: 'error',
           text: 'Ah não usuário ou senha inválidos!',
           visible: true,
@@ -45,10 +54,10 @@ const Login = () => {
   return (
     <Layout justify="center">
       <Alert
-        type={dataModal.type}
-        text={dataModal.text}
-        visible={dataModal.visible}
-        handleVisible={() => setDataModal({ visible: false })}
+        type={alert.type}
+        text={alert.text}
+        visible={alert.visible}
+        handleVisible={() => setAlert({ visible: false })}
       />
       <Container>
         <Icon name="account-circle" size={75} mb={25} />

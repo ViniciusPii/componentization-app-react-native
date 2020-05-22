@@ -16,10 +16,10 @@ import {
 
 const CreateAccount = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('a@teste.com');
-  const [password, setPassword] = useState('123123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [dataModal, setDataModal] = useState({ visible: false });
+  const [alert, setAlert] = useState({});
 
   const handleCreateAccount = () => {
     setLoading(true);
@@ -31,14 +31,18 @@ const CreateAccount = () => {
         firebase.database().ref('users').child(res.user.uid).set({
           name,
         });
-
+        setAlert({
+          type: 'success',
+          text: 'Cadastrado com sucesso!',
+          visible: true,
+        });
         setLoading(false);
         Keyboard.dismiss();
       })
       .catch((erro) => {
         if (name === '' || email === '' || password === '') {
-          setDataModal({
-            type: 'error',
+          setAlert({
+            type: 'warning',
             text: 'Preencha todos os campos!',
             visible: true,
           });
@@ -50,19 +54,35 @@ const CreateAccount = () => {
 
         switch (erro.message) {
           case 'Password should be at least 6 characters':
-            alert('Sua senha deve ter no minimo 6 caracteres!');
+            setAlert({
+              type: 'error',
+              text: 'Sua senha deve ter no minimo 6 caracteres!',
+              visible: true,
+            });
             break;
 
           case 'The email address is already in use by another account.':
-            alert('Esse email já está sendo utilizado por outro usuário!');
+            setAlert({
+              type: 'error',
+              text: 'Esse email já está sendo utilizado por outro usuário!',
+              visible: true,
+            });
             break;
 
           case 'The email address is badly formatted.':
-            alert('O formato do email não é válido!');
+            setAlert({
+              type: 'error',
+              text: 'O formato do email não é válido!',
+              visible: true,
+            });
             break;
 
           default:
-            alert('Não foi possível cadastrar o Usuário');
+            setAlert({
+              type: 'error',
+              text: 'Não foi possível cadastrar o Usuário',
+              visible: true,
+            });
             break;
         }
         setLoading(false);
@@ -73,10 +93,10 @@ const CreateAccount = () => {
   return (
     <Layout justify="center">
       <Alert
-        type={dataModal.type}
-        text={dataModal.text}
-        visible={dataModal.visible}
-        handleVisible={() => setDataModal({ visible: false })}
+        type={alert.type}
+        text={alert.text}
+        visible={alert.visible}
+        handleVisible={() => setAlert({ visible: false })}
       />
       <Container>
         <Text text="É rapidinho :)" />
