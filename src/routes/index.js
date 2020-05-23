@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
+import { useGlobal } from '../contexts/GlobalContext';
+
 import firebase from '../services/firebase';
 
 import AuthRoutes from './auth.routes';
 import AppRoutes from './app.routes';
+
 import { Layout, Loading } from '../components';
 
 const Routes = () => {
+  const { loading, setLoading } = useGlobal();
+
   const [signed, setSigned] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);

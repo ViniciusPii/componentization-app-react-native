@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import theme from './theme';
+import theme from './themes';
 import { AppProvider } from './components';
 
 import Routes from './routes';

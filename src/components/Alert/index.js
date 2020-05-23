@@ -19,7 +19,7 @@ const Alert = ({ ...props }) => {
   const [color, setColor] = useState('neutral');
   const [title, setTitle] = useState('Modal');
 
-  const changeModal = () => {
+  const changeAlert = () => {
     switch (type) {
       case 'success':
         setName('check-circle-outline');
@@ -45,12 +45,12 @@ const Alert = ({ ...props }) => {
   };
 
   useEffect(() => {
-    changeModal();
+    changeAlert();
   }, [type]);
 
   return (
-    <S.Modal type={type} animationType="fade" transparent visible={visible}>
-      <S.ModalContainer>
+    <S.Alert type={type} animationType="fade" transparent visible={visible}>
+      <S.AlertContainer>
         <Container bgColor="white" w="80%" p={15}>
           <Icon name={name} color={color} size={45} />
           <Text text={title} fs={28} />
@@ -62,8 +62,8 @@ const Alert = ({ ...props }) => {
             bgColor={color}
           />
         </Container>
-      </S.ModalContainer>
-    </S.Modal>
+      </S.AlertContainer>
+    </S.Alert>
   );
 };
 
