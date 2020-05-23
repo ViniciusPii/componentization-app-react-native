@@ -13,13 +13,14 @@ import {
   Button,
   Alert,
 } from '../../components';
+import { useGlobal } from '../../contexts/GlobalContext';
 
 const CreateAccount = () => {
+  const { alertModal, setAlertModal, loading, setLoading } = useGlobal();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [alert, setAlert] = useState({});
 
   const handleCreateAccount = () => {
     setLoading(true);
@@ -31,7 +32,7 @@ const CreateAccount = () => {
         firebase.database().ref('users').child(res.user.uid).set({
           name,
         });
-        setAlert({
+        setAlertModal({
           type: 'success',
           text: 'Cadastrado com sucesso!',
           visible: true,
@@ -41,7 +42,7 @@ const CreateAccount = () => {
       })
       .catch((erro) => {
         if (name === '' || email === '' || password === '') {
-          setAlert({
+          setAlertModal({
             type: 'warning',
             text: 'Preencha todos os campos!',
             visible: true,
@@ -54,7 +55,7 @@ const CreateAccount = () => {
 
         switch (erro.message) {
           case 'Password should be at least 6 characters':
-            setAlert({
+            setAlertModal({
               type: 'error',
               text: 'Sua senha deve ter no minimo 6 caracteres!',
               visible: true,
@@ -62,7 +63,7 @@ const CreateAccount = () => {
             break;
 
           case 'The email address is already in use by another account.':
-            setAlert({
+            setAlertModal({
               type: 'error',
               text: 'Esse email já está sendo utilizado por outro usuário!',
               visible: true,
@@ -70,7 +71,7 @@ const CreateAccount = () => {
             break;
 
           case 'The email address is badly formatted.':
-            setAlert({
+            setAlertModal({
               type: 'error',
               text: 'O formato do email não é válido!',
               visible: true,
@@ -78,7 +79,7 @@ const CreateAccount = () => {
             break;
 
           default:
-            setAlert({
+            setAlertModal({
               type: 'error',
               text: 'Não foi possível cadastrar o Usuário',
               visible: true,
@@ -93,9 +94,9 @@ const CreateAccount = () => {
   return (
     <Layout justify="center">
       <Alert
-        type={alert.type}
-        text={alert.text}
-        visible={alert.visible}
+        type={alertModal.type}
+        text={alertModal.text}
+        visible={alertModal.visible}
         handleVisible={() => setAlert({ visible: false })}
       />
       <Container>

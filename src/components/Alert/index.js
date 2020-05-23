@@ -8,9 +8,12 @@ import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
 import Container from '../Container';
+import { useGlobal } from '../../contexts/GlobalContext';
 
 const Alert = ({ ...props }) => {
-  const { type, text, visible, handleVisible } = props;
+  const { type, text, visible } = props;
+
+  const { setAlertModal } = useGlobal();
 
   const [name, setName] = useState('home');
   const [color, setColor] = useState('neutral');
@@ -52,7 +55,12 @@ const Alert = ({ ...props }) => {
           <Icon name={name} color={color} size={45} />
           <Text text={title} fs={28} />
           <Text text={text} fs={20} mb={30} />
-          <Button text="Ok" onPress={handleVisible} mb={0} bgColor={color} />
+          <Button
+            text="Ok"
+            onPress={() => setAlertModal({ visible: false })}
+            mb={0}
+            bgColor={color}
+          />
         </Container>
       </S.ModalContainer>
     </S.Modal>

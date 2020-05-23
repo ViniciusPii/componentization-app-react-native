@@ -13,21 +13,22 @@ import {
   Button,
   Alert,
 } from '../../components';
+import { useGlobal } from '../../contexts/GlobalContext';
 
 const Login = () => {
   const navigation = useNavigation();
 
+  const { alertModal, setAlertModal, loading, setLoading } = useGlobal();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [alert, setAlert] = useState({});
 
   const handleLogin = async () => {
     setLoading(true);
 
     if (email === '' || password === '') {
       setLoading(false);
-      setAlert({
+      setAlertModal({
         type: 'warning',
         text: 'Preencha todos os campos!',
         visible: true,
@@ -43,7 +44,7 @@ const Login = () => {
       })
       .catch(() => {
         setLoading(false);
-        setAlert({
+        setAlertModal({
           type: 'error',
           text: 'Ah não usuário ou senha inválidos!',
           visible: true,
@@ -54,10 +55,9 @@ const Login = () => {
   return (
     <Layout justify="center">
       <Alert
-        type={alert.type}
-        text={alert.text}
-        visible={alert.visible}
-        handleVisible={() => setAlert({ visible: false })}
+        type={alertModal.type}
+        text={alertModal.text}
+        visible={alertModal.visible}
       />
       <Container>
         <Icon name="account-circle" size={75} mb={25} />
