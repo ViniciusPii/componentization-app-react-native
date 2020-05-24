@@ -29,37 +29,37 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    // setLoadingButton(true);
-    // setTimeout(() => {
-    //   setLoadingButton(false);
-    // }, 1500);
-
     setLoadingButton(true);
-
-    if (email === '' || password === '') {
+    setTimeout(() => {
       setLoadingButton(false);
-      setAlertModal({
-        type: 'warning',
-        text: 'Preencha todos os campos!',
-        visible: true,
-      });
-      return;
-    }
+    }, 1500);
 
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        setLoadingButton(false);
-      })
-      .catch(() => {
-        setLoadingButton(false);
-        setAlertModal({
-          type: 'error',
-          text: 'Ah não usuário ou senha inválidos!',
-          visible: true,
-        });
-      });
+    // setLoadingButton(true);
+
+    // if (email === '' || password === '') {
+    //   setLoadingButton(false);
+    //   setAlertModal({
+    //     type: 'warning',
+    //     text: 'Preencha todos os campos!',
+    //     visible: true,
+    //   });
+    //   return;
+    // }
+
+    // firebase
+    //   .auth()
+    //   .signInWithEmailAndPassword(email, password)
+    //   .then(() => {
+    //     setLoadingButton(false);
+    //   })
+    //   .catch(() => {
+    //     setLoadingButton(false);
+    //     setAlertModal({
+    //       type: 'error',
+    //       text: 'Ah não usuário ou senha inválidos!',
+    //       visible: true,
+    //     });
+    //   });
   };
 
   return (

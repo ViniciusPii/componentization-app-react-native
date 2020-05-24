@@ -39,11 +39,11 @@ const Layout = ({ ...props }) => {
 
 Layout.defaultProps = {
   justify: 'flex-start',
-  bgColor: 'neutral100',
-  color1: 'neutral',
-  color2: 'neutral100',
-  barColor: 'neutral100',
-  barStyle: 'dark-content',
+  bgColor: 'bgColor',
+  color1: 'gradient1',
+  color2: 'gradient2',
+  barColor: 'barColor',
+  barStyle: 'barStyle',
   w: '90%',
 };
 
