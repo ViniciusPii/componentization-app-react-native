@@ -9,6 +9,6 @@ export const Card = styled.View`
   margin-top: ${({ mt }) => mt}px;
   margin-bottom: ${({ mb }) => mb}px;
   border-radius: 8px;
-  background-color: ${({ theme, bgColor }) => theme[bgColor]};
-  box-shadow: 1px 1px 5px ${({ theme, shadow }) => theme[shadow]};
+  background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
+  box-shadow: 1px 1px 5px ${({ theme, shadow }) => theme.colors[shadow]};
 `;

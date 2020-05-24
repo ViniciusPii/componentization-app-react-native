@@ -5,12 +5,12 @@ import { StatusBar } from 'react-native';
 export const Background = styled.SafeAreaView`
   flex: 1;
   align-items: center;
-  background-color: ${({ theme, bgColor }) => theme[bgColor]};
+  background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
 `;
 
 export const BackgroundGradient = styled(LinearGradient).attrs(
   ({ theme, color1, color2 }) => ({
-    colors: [theme[color1], theme[color2]],
+    colors: [theme[color1], theme.colors[color2]],
   })
 )`
   flex: 1;
@@ -19,7 +19,7 @@ export const BackgroundGradient = styled(LinearGradient).attrs(
 
 export const Status = styled(StatusBar).attrs(
   ({ theme, barColor, barStyle }) => ({
-    backgroundColor: theme[barColor],
+    backgroundColor: theme.colors[barColor],
     barStyle,
   })
 )``;

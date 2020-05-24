@@ -1,4 +1,4 @@
-const colors = {
+export default {
   // Base
   aquaBlue: '#00dec3',
   aquaGreen: '#06FB87',
@@ -269,5 +269,3 @@ const colors = {
   yellow900: '#5E4607',
   yellow950: '#2F2304',
 };
-
-export default colors;

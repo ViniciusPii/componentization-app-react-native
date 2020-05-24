@@ -3,7 +3,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const MyIcon = styled(Icon).attrs(({ theme, color, size, name }) => ({
   name,
-  color: theme[color],
+  color: theme.colors[color],
   size,
 }))`
   margin-top: ${({ mt }) => mt}px;

@@ -7,5 +7,5 @@ export const AlertContainer = styled.View`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.blackOpacity};
+  background-color: ${({ theme }) => theme.colors.blackOpacity};
 `;

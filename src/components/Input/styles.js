@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Input = styled.TextInput.attrs(
   ({ theme, placeholderTextColor }) => ({
-    placeholderTextColor: theme[placeholderTextColor],
+    placeholderTextColor: theme.colors[placeholderTextColor],
   })
 )`
   width: ${({ w }) => w};
@@ -10,9 +10,9 @@ export const Input = styled.TextInput.attrs(
   padding-left: 10px;
   margin-top: ${({ mt }) => mt}px;
   margin-bottom: ${({ mb }) => mb}px;
-  border: 1px solid ${({ theme, borderColor }) => theme[borderColor]};
+  border: 1px solid ${({ theme, borderColor }) => theme.colors[borderColor]};
   border-radius: 5px;
-  background-color: ${({ theme, bgColor }) => theme[bgColor]};
-  color: ${({ theme, textColor }) => theme[textColor]};
+  background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
+  color: ${({ theme, textColor }) => theme.colors[textColor]};
   font-size: 16px;
 `;
