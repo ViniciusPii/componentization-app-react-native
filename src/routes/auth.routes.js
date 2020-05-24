@@ -26,11 +26,11 @@ const AuthRoutes = () => {
         options={{
           headerBackTitleVisible: false,
           headerTitle: 'Voltar',
-          headerTintColor: theme.neutral700,
+          headerTintColor: theme.colors.neutral600,
           headerStyle: {
-            backgroundColor: theme.neutral100,
+            backgroundColor: theme.colors.neutral100,
             borderBottomWidth: 1,
-            borderBottomColor: theme.neutral500,
+            borderBottomColor: theme.colors.neutral500,
           },
         }}
       />
