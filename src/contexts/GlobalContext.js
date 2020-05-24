@@ -4,11 +4,19 @@ const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
+  const [loadingButton, setLoadingButton] = useState(false);
   const [alertModal, setAlertModal] = useState({});
 
   return (
     <GlobalContext.Provider
-      value={{ loading, setLoading, alertModal, setAlertModal }}
+      value={{
+        loading,
+        setLoading,
+        alertModal,
+        setAlertModal,
+        loadingButton,
+        setLoadingButton,
+      }}
     >
       {children}
     </GlobalContext.Provider>
@@ -17,8 +25,22 @@ const GlobalProvider = ({ children }) => {
 
 export const useGlobal = () => {
   const context = useContext(GlobalContext);
-  const { loading, setLoading, alertModal, setAlertModal } = context;
-  return { loading, setLoading, alertModal, setAlertModal };
+  const {
+    loading,
+    setLoading,
+    alertModal,
+    setAlertModal,
+    loadingButton,
+    setLoadingButton,
+  } = context;
+  return {
+    loading,
+    setLoading,
+    alertModal,
+    setAlertModal,
+    loadingButton,
+    setLoadingButton,
+  };
 };
 
 export default GlobalProvider;

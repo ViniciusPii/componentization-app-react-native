@@ -18,16 +18,26 @@ import { useGlobal } from '../../contexts/GlobalContext';
 const Login = () => {
   const navigation = useNavigation();
 
-  const { alertModal, setAlertModal, loading, setLoading } = useGlobal();
+  const {
+    alertModal,
+    setAlertModal,
+    loadingButton,
+    setLoadingButton,
+  } = useGlobal();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    setLoading(true);
+    // setLoadingButton(true);
+    // setTimeout(() => {
+    //   setLoadingButton(false);
+    // }, 1500);
+
+    setLoadingButton(true);
 
     if (email === '' || password === '') {
-      setLoading(false);
+      setLoadingButton(false);
       setAlertModal({
         type: 'warning',
         text: 'Preencha todos os campos!',
@@ -40,10 +50,10 @@ const Login = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        setLoading(false);
+        setLoadingButton(false);
       })
       .catch(() => {
-        setLoading(false);
+        setLoadingButton(false);
         setAlertModal({
           type: 'error',
           text: 'Ah não usuário ou senha inválidos!',
@@ -73,7 +83,12 @@ const Login = () => {
           value={password}
           onChangeText={(t) => setPassword(t)}
         />
-        <Button text="Logar" mt={20} onPress={handleLogin} loading={loading} />
+        <Button
+          text="Logar"
+          mt={20}
+          onPress={handleLogin}
+          loading={loadingButton}
+        />
         <Button
           type="link"
           text="Crie sua conta!"

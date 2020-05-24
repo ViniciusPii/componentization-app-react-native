@@ -16,14 +16,19 @@ import {
 import { useGlobal } from '../../contexts/GlobalContext';
 
 const CreateAccount = () => {
-  const { alertModal, setAlertModal, loading, setLoading } = useGlobal();
+  const {
+    alertModal,
+    setAlertModal,
+    loadingButton,
+    setLoadingButton,
+  } = useGlobal();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleCreateAccount = () => {
-    setLoading(true);
+    setLoadingButton(true);
 
     firebase
       .auth()
@@ -37,7 +42,7 @@ const CreateAccount = () => {
           text: 'Cadastrado com sucesso!',
           visible: true,
         });
-        setLoading(false);
+        setLoadingButton(false);
         Keyboard.dismiss();
       })
       .catch((erro) => {
@@ -48,7 +53,7 @@ const CreateAccount = () => {
             visible: true,
           });
 
-          setLoading(false);
+          setLoadingButton(false);
           Keyboard.dismiss();
           return;
         }
@@ -86,7 +91,7 @@ const CreateAccount = () => {
             });
             break;
         }
-        setLoading(false);
+        setLoadingButton(false);
         Keyboard.dismiss();
       });
   };
@@ -121,7 +126,7 @@ const CreateAccount = () => {
           text="Cadastrar"
           onPress={handleCreateAccount}
           mt={25}
-          loading={loading}
+          loading={loadingButton}
         />
       </Container>
     </Layout>
