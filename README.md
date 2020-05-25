@@ -18,7 +18,6 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
   - Component Alert
   - Component AppProvider
   - Component Button
-  - Component Card (Necessita refatoração)
   - Component Container
   - Component Icon
   - Component Img

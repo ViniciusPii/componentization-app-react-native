@@ -4,14 +4,10 @@ import PropTypes from 'prop-types';
 
 import * as S from './styles';
 
-import Button from '../Button';
-import Icon from '../Icon';
-import Text from '../Text';
-import Container from '../Container';
 import { useGlobal } from '../../contexts/GlobalContext';
 
 const Alert = ({ ...props }) => {
-  const { type, text, visible } = props;
+  const { type, body, visible } = props;
 
   const { setAlertModal } = useGlobal();
 
@@ -38,8 +34,8 @@ const Alert = ({ ...props }) => {
         break;
       default:
         setName('alert-circle-outline');
-        setColor('yellow');
-        setTitle('Atenção!');
+        setColor('celeste');
+        setTitle('Info!');
         break;
     }
   };
@@ -51,31 +47,31 @@ const Alert = ({ ...props }) => {
   return (
     <S.Alert type={type} animationType="fade" transparent visible={visible}>
       <S.AlertContainer>
-        <Container bgColor="white" w="80%" p={15}>
-          <Icon name={name} color={color} size={45} />
-          <Text text={title} fs={28} />
-          <Text text={text} fs={20} mb={30} />
-          <Button
-            text="Ok"
-            onPress={() => setAlertModal({ visible: false })}
-            mb={0}
+        <S.AlertContent>
+          <S.AlertIcon name={name} color={color} size={45} />
+          <S.AlertTitle>{title}</S.AlertTitle>
+          <S.AlertBody>{body}</S.AlertBody>
+          <S.AlertButton
             bgColor={color}
-          />
-        </Container>
+            onPress={() => setAlertModal({ visible: false })}
+          >
+            <S.AlertButtonText>Ok</S.AlertButtonText>
+          </S.AlertButton>
+        </S.AlertContent>
       </S.AlertContainer>
     </S.Alert>
   );
 };
 
 Alert.defaultProps = {
-  type: 'warning',
-  text: 'Esse é um Alerta de exemplo!',
+  type: 'info',
+  body: 'Esse é um Alerta de exemplo!',
   visible: false,
 };
 
 Alert.propTypes = {
   type: PropTypes.string,
-  text: PropTypes.string,
+  body: PropTypes.string,
   visible: PropTypes.bool,
 };
 

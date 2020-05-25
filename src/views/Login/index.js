@@ -29,44 +29,45 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
+    // setAlertModal({
+    //   type: 'success',
+    //   body: 'Cadastre suas credenciais',
+    //   visible: true,
+    // });
+
     setLoadingButton(true);
-    setTimeout(() => {
+
+    if (email === '' || password === '') {
       setLoadingButton(false);
-    }, 1500);
+      setAlertModal({
+        type: 'warning',
+        body: 'Preencha todos os campos!',
+        visible: true,
+      });
+      return;
+    }
 
-    // setLoadingButton(true);
-
-    // if (email === '' || password === '') {
-    //   setLoadingButton(false);
-    //   setAlertModal({
-    //     type: 'warning',
-    //     text: 'Preencha todos os campos!',
-    //     visible: true,
-    //   });
-    //   return;
-    // }
-
-    // firebase
-    //   .auth()
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then(() => {
-    //     setLoadingButton(false);
-    //   })
-    //   .catch(() => {
-    //     setLoadingButton(false);
-    //     setAlertModal({
-    //       type: 'error',
-    //       text: 'Ah não usuário ou senha inválidos!',
-    //       visible: true,
-    //     });
-    //   });
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        setLoadingButton(false);
+      })
+      .catch(() => {
+        setLoadingButton(false);
+        setAlertModal({
+          type: 'error',
+          body: 'Ah não usuário ou senha inválidos!',
+          visible: true,
+        });
+      });
   };
 
   return (
     <Layout justify="center">
       <Alert
         type={alertModal.type}
-        text={alertModal.text}
+        body={alertModal.body}
         visible={alertModal.visible}
       />
       <Container>

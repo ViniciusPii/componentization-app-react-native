@@ -39,7 +39,7 @@ const CreateAccount = () => {
         });
         setAlertModal({
           type: 'success',
-          text: 'Cadastrado com sucesso!',
+          body: 'Cadastrado com sucesso!',
           visible: true,
         });
         setLoadingButton(false);
@@ -49,7 +49,7 @@ const CreateAccount = () => {
         if (name === '' || email === '' || password === '') {
           setAlertModal({
             type: 'warning',
-            text: 'Preencha todos os campos!',
+            body: 'Preencha todos os campos!',
             visible: true,
           });
 
@@ -62,7 +62,7 @@ const CreateAccount = () => {
           case 'Password should be at least 6 characters':
             setAlertModal({
               type: 'error',
-              text: 'Sua senha deve ter no minimo 6 caracteres!',
+              body: 'Sua senha deve ter no minimo 6 caracteres!',
               visible: true,
             });
             break;
@@ -70,7 +70,7 @@ const CreateAccount = () => {
           case 'The email address is already in use by another account.':
             setAlertModal({
               type: 'error',
-              text: 'Esse email já está sendo utilizado por outro usuário!',
+              body: 'Esse email já está sendo utilizado por outro usuário!',
               visible: true,
             });
             break;
@@ -78,7 +78,7 @@ const CreateAccount = () => {
           case 'The email address is badly formatted.':
             setAlertModal({
               type: 'error',
-              text: 'O formato do email não é válido!',
+              body: 'O formato do email não é válido!',
               visible: true,
             });
             break;
@@ -86,7 +86,7 @@ const CreateAccount = () => {
           default:
             setAlertModal({
               type: 'error',
-              text: 'Não foi possível cadastrar o Usuário',
+              body: 'Não foi possível cadastrar o Usuário',
               visible: true,
             });
             break;
@@ -100,7 +100,7 @@ const CreateAccount = () => {
     <Layout justify="center">
       <Alert
         type={alertModal.type}
-        text={alertModal.text}
+        body={alertModal.body}
         visible={alertModal.visible}
         handleVisible={() => setAlert({ visible: false })}
       />
