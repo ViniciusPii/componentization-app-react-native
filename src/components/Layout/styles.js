@@ -9,8 +9,8 @@ export const Background = styled.SafeAreaView`
 `;
 
 export const BackgroundGradient = styled(LinearGradient).attrs(
-  ({ theme, color1, color2 }) => ({
-    colors: [theme.appColors[color1], theme.appColors[color2]],
+  ({ theme, bgColor, bgColor2 }) => ({
+    colors: [theme.appColors[bgColor], theme.appColors[bgColor2]],
   })
 )`
   flex: 1;
@@ -20,7 +20,7 @@ export const BackgroundGradient = styled(LinearGradient).attrs(
 export const Status = styled(StatusBar).attrs(
   ({ theme, barColor, barStyle }) => ({
     backgroundColor: theme.appColors[barColor],
-    barStyle: theme.appColors[barStyle],
+    barStyle,
   })
 )``;
 

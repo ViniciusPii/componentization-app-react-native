@@ -59,7 +59,6 @@ Button.propTypes = {
   bgColor: PropTypes.string,
   textColor: PropTypes.string,
   textLinkColor: PropTypes.string,
-  loadingBtnColor: PropTypes.string,
   mt: PropTypes.number,
   mb: PropTypes.number,
   w: PropTypes.string,

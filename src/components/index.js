@@ -1,6 +1,5 @@
 import AppProvider from './AppProvider';
 import Button from './Button';
-import Card from './Card';
 import Container from './Container';
 import Icon from './Icon';
 import Img from './Img';
@@ -13,7 +12,6 @@ import Text from './Text';
 export {
   AppProvider,
   Button,
-  Card,
   Container,
   Icon,
   Img,

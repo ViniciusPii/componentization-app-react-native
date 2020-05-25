@@ -40,18 +40,16 @@ const Layout = ({ ...props }) => {
 Layout.defaultProps = {
   justify: 'flex-start',
   bgColor: 'bgColor',
-  color1: 'gradient1',
-  color2: 'gradient2',
-  barColor: 'barColor',
-  barStyle: 'barStyle',
+  bgColor2: 'bgColor2',
+  barColor: 'bgColor',
+  barStyle: 'dark-content',
   w: '90%',
 };
 
 Layout.propTypes = {
   justify: PropTypes.string,
   bgColor: PropTypes.string,
-  color1: PropTypes.string,
-  color2: PropTypes.string,
+  bgColor2: PropTypes.string,
   barColor: PropTypes.string,
   barStyle: PropTypes.string,
   w: PropTypes.string,
