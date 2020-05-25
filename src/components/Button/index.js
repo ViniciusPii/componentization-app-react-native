@@ -4,18 +4,15 @@ import PropTypes from 'prop-types';
 
 import * as S from './styles';
 
-import Loading from '../Loading';
-
 const Button = ({ ...props }) => {
   const {
     type,
     children,
     fs,
     textColor,
+    textLinkColor,
     text,
     loading,
-    loadingColor,
-    loadingSize,
     bold,
   } = props;
 
@@ -23,7 +20,7 @@ const Button = ({ ...props }) => {
     return (
       <S.ButtonLink {...props}>
         {children}
-        <S.TextButtonLink fs={fs} textColor={textColor} bold={bold}>
+        <S.TextButtonLink fs={fs} textLinkColor={textLinkColor} bold={bold}>
           {text}
         </S.TextButtonLink>
       </S.ButtonLink>
@@ -33,7 +30,7 @@ const Button = ({ ...props }) => {
   return (
     <S.Button {...props}>
       {loading ? (
-        <Loading loadingColor={loadingColor} loadingSize={loadingSize} />
+        <S.LoadingButton loadingBtnColor={textColor} />
       ) : (
         <>
           {children}
@@ -47,8 +44,9 @@ const Button = ({ ...props }) => {
 };
 
 Button.defaultProps = {
-  bgColor: 'neutral',
-  textColor: 'white',
+  bgColor: 'bgColor',
+  textColor: 'textColor',
+  textLinkColor: 'textLinkColor',
   mt: 0,
   mb: 20,
   w: '100%',
@@ -60,6 +58,8 @@ Button.defaultProps = {
 Button.propTypes = {
   bgColor: PropTypes.string,
   textColor: PropTypes.string,
+  textLinkColor: PropTypes.string,
+  loadingBtnColor: PropTypes.string,
   mt: PropTypes.number,
   mb: PropTypes.number,
   w: PropTypes.string,

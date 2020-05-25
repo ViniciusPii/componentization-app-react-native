@@ -12,4 +12,10 @@ export default {
     barColor: colors.blue100,
     barStyle: 'dark-content',
   },
+  buttonColors: {
+    ...colors,
+    bgColor: colors.blue,
+    textColor: colors.white,
+    textLinkColor: colors.blue,
+  },
 };
