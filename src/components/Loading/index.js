@@ -11,7 +11,7 @@ const Loading = ({ ...props }) => {
 };
 
 Loading.defaultProps = {
-  loadingColor: 'white',
+  loadingColor: 'primaryColor',
   loadingSize: 'large',
 };
 

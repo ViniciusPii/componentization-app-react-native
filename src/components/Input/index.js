@@ -9,10 +9,10 @@ const Input = ({ ...props }) => {
 };
 
 Input.defaultProps = {
-  borderColor: 'ghost',
-  bgColor: 'placeholderNeutral',
-  textColor: 'neutral700',
-  placeholderTextColor: 'neutral',
+  borderColor: 'border',
+  bgColor: 'bgColor',
+  textColor: 'textColor',
+  placeholderTextColor: 'placeholderTextColor',
   mt: 0,
   mb: 15,
   w: '100%',

@@ -44,9 +44,9 @@ const Button = ({ ...props }) => {
 };
 
 Button.defaultProps = {
-  bgColor: 'bgColor',
-  textColor: 'textColor',
-  textLinkColor: 'textLinkColor',
+  bgColor: 'primaryColor',
+  textColor: 'textButton',
+  textLinkColor: 'textLinkButton',
   mt: 0,
   mb: 20,
   w: '100%',

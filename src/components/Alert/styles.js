@@ -8,7 +8,7 @@ export const AlertContainer = styled.View`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.blackOpacity};
+  background-color: ${({ theme }) => theme.appColors.alert.bgOpacity};
 `;
 
 export const AlertContent = styled.View`
@@ -16,23 +16,24 @@ export const AlertContent = styled.View`
   padding: 20px;
   align-items: center;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.appColors.alert.bgColor};
 `;
 
-export const AlertIcon = styled(Icon).attrs(({ theme, color }) => ({
-  color: theme.colors[color],
+export const AlertIcon = styled(Icon).attrs(({ theme, type }) => ({
+  color: theme.appColors.alert[type],
+  size: 45,
 }))``;
 
 export const AlertTitle = styled.Text`
   font-size: 28px;
-  color: ${({ theme }) => theme.colors.neutral600};
+  color: ${({ theme }) => theme.appColors.alert.textAlert};
 `;
 
 export const AlertBody = styled.Text`
   margin-top: 15px;
   text-align: center;
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.neutral600};
+  color: ${({ theme }) => theme.appColors.alert.textAlert};
 `;
 
 export const AlertButton = styled.TouchableOpacity`
@@ -42,11 +43,11 @@ export const AlertButton = styled.TouchableOpacity`
   justify-content: center;
   margin-top: 20px;
   border-radius: 5px;
-  background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
+  background-color: ${({ theme, type }) => theme.appColors.alert[type]};
 `;
 
 export const AlertButtonText = styled.Text`
   font-size: 18px;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.appColors.alert.textButton};
 `;

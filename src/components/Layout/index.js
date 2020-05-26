@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 import * as S from './styles';
 
 const Layout = ({ ...props }) => {
-  const { linear, barColor, barStyle, bgColor, children } = props;
+  const { linear, barStyle, bgColor, children } = props;
 
   if (linear === 'gradient') {
     return (
       <S.BackgroundGradient {...props}>
-        <S.Status barColor={barColor} barStyle={barStyle} />
+        <S.Status barColor={bgColor} barStyle={barStyle} />
         <S.Layout
           {...props}
           enabled
@@ -25,7 +25,7 @@ const Layout = ({ ...props }) => {
 
   return (
     <S.Background bgColor={bgColor}>
-      <S.Status barColor={barColor} barStyle={barStyle} />
+      <S.Status barColor={bgColor} barStyle={barStyle} />
       <S.Layout
         {...props}
         enabled
@@ -39,9 +39,9 @@ const Layout = ({ ...props }) => {
 
 Layout.defaultProps = {
   justify: 'flex-start',
-  bgColor: 'bgColor',
-  bgColor2: 'bgColor2',
-  barColor: 'bgColor',
+  bgColor: 'secondaryColor',
+  bgColor2: 'primaryColor',
+  barColor: 'secondaryColor',
   barStyle: 'dark-content',
   w: '90%',
 };

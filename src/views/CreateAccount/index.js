@@ -1,5 +1,3 @@
-/* eslint-disable no-alert */
-/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { Keyboard } from 'react-native';
 
@@ -102,7 +100,7 @@ const CreateAccount = () => {
         type={alertModal.type}
         body={alertModal.body}
         visible={alertModal.visible}
-        handleVisible={() => setAlert({ visible: false })}
+        handleVisible={() => setAlertModal({ visible: false })}
       />
       <Container>
         <Text text="É rapidinho :)" />

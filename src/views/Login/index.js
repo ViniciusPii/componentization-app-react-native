@@ -1,5 +1,3 @@
-/* eslint-disable no-alert */
-/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -29,11 +27,15 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    // setAlertModal({
-    //   type: 'success',
-    //   body: 'Cadastre suas credenciais',
-    //   visible: true,
-    // });
+    // setLoadingButton(true);
+    // setTimeout(() => {
+    //   setLoadingButton(false);
+    //   setAlertModal({
+    //     type: 'success',
+    //     body: 'Modal de exemplo',
+    //     visible: true,
+    //   });
+    // }, 1500);
 
     setLoadingButton(true);
 
@@ -93,7 +95,6 @@ const Login = () => {
         <Button
           type="link"
           text="Crie sua conta!"
-          textColor="neutral600"
           mt={5}
           onPress={() => navigation.navigate('CreateAccount')}
         />

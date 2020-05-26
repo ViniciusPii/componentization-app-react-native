@@ -10,7 +10,7 @@ const Icon = ({ ...props }) => {
 
 Icon.defaultProps = {
   size: 30,
-  color: 'neutral',
+  iconColor: 'primaryColor',
   name: 'emoticon-cool-outline',
   mt: 0,
   mb: 0,
@@ -20,7 +20,7 @@ Icon.defaultProps = {
 
 Icon.propTypes = {
   size: PropTypes.number,
-  color: PropTypes.string,
+  iconColor: PropTypes.string,
   name: PropTypes.string,
   mt: PropTypes.number,
   mb: PropTypes.number,

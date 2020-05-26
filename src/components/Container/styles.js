@@ -16,5 +16,5 @@ export const Container = styled.View`
   padding-left: ${({ pl }) => pl}px;
   padding: ${({ p }) => p}px;
   border-radius: ${({ radius }) => radius}px;
-  background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
+  background-color: ${({ theme, bgColor }) => theme.appColors[bgColor]};
 `;

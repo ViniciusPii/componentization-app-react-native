@@ -14,7 +14,7 @@ Container.defaultProps = {
   justify: 'center',
   align: 'center',
   orientation: 'column',
-  bgColor: 'ghost',
+  bgColor: 'transparent',
   w: '100%',
   mt: 0,
   mb: 0,
@@ -26,7 +26,7 @@ Container.defaultProps = {
   pl: 0,
   pr: 0,
   p: 0,
-  radius: 10,
+  radius: 0,
 };
 
 Container.propTypes = {
