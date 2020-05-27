@@ -11,39 +11,38 @@ const Alert = ({ ...props }) => {
 
   const { setAlertModal } = useGlobal();
 
-  const [name, setName] = useState('');
+  const [icon, setIcon] = useState('');
   const [title, setTitle] = useState('');
 
-  const changeAlert = () => {
-    switch (type) {
-      case 'success':
-        setName('check-circle-outline');
-        setTitle('Sucesso!');
-        break;
-      case 'error':
-        setName('close-circle-outline');
-        setTitle('Ops!');
-        break;
-      case 'warning':
-        setName('alert-circle-outline');
-        setTitle('Atenção!');
-        break;
-      default:
-        setName('alert-circle-outline');
-        setTitle('Info!');
-        break;
-    }
+  const dataAlert = {
+    success: {
+      icon: 'check-circle-outline',
+      title: 'Sucesso!',
+    },
+    error: {
+      icon: 'close-circle-outline',
+      title: 'Ops!',
+    },
+    warning: {
+      icon: 'alert-circle-outline',
+      title: 'Atenção!',
+    },
+    info: {
+      icon: 'alert-circle-outline',
+      title: 'Info!',
+    },
   };
 
   useEffect(() => {
-    changeAlert();
+    setIcon(dataAlert[type].icon);
+    setTitle(dataAlert[type].title);
   }, [type]);
 
   return (
     <S.Alert type={type} animationType="fade" transparent visible={visible}>
       <S.AlertContainer>
         <S.AlertContent>
-          <S.AlertIcon name={name} type={type} />
+          <S.AlertIcon name={icon} type={type} />
           <S.AlertTitle>{title}</S.AlertTitle>
           <S.AlertBody>{body}</S.AlertBody>
           <S.AlertButton
