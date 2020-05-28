@@ -1,3 +1,4 @@
+import Alert from './Alert';
 import AppProvider from './AppProvider';
 import Button from './Button';
 import Container from './Container';
@@ -6,10 +7,11 @@ import Img from './Img';
 import Input from './Input';
 import Layout from './Layout';
 import Loading from './Loading';
-import Alert from './Alert';
+import Preload from './Preload';
 import Text from './Text';
 
 export {
+  Alert,
   AppProvider,
   Button,
   Container,
@@ -18,6 +20,6 @@ export {
   Input,
   Layout,
   Loading,
-  Alert,
+  Preload,
   Text,
 };

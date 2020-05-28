@@ -24,6 +24,7 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
   - Component Input
   - Component Layout
   - Component Loading
+  - Component Preload (v1)
   - Component Text
 
   - Component Colors substituído por um theme que pode ser personalizado.

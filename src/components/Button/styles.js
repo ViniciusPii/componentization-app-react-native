@@ -6,8 +6,11 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin: ${({ mt }) => mt}px;
   margin-top: ${({ mt }) => mt}px;
   margin-bottom: ${({ mb }) => mb}px;
+  margin-right: ${({ mr }) => mr}px;
+  margin-left: ${({ ml }) => ml}px;
   padding: 0 20px;
   background-color: ${({ theme, bgColor }) => theme.appColors[bgColor]};
   border-radius: 5px;

@@ -5,17 +5,13 @@ import AppRoutes from './app.routes';
 
 import { useAuth } from '../contexts/AuthContext';
 
-import { Layout, Loading } from '../components';
+import { Preload } from '../components';
 
 const Routes = () => {
   const { signed, loading } = useAuth();
 
   if (loading) {
-    return (
-      <Layout justify="center">
-        <Loading loading={loading} />
-      </Layout>
-    );
+    return <Preload />;
   }
 
   return signed ? <AppRoutes /> : <AuthRoutes />;

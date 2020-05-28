@@ -17,6 +17,8 @@ Text.defaultProps = {
   bold: 400,
   mt: 0,
   mb: 20,
+  ml: 0,
+  mr: 0,
   fs: 18,
 };
 
@@ -27,6 +29,8 @@ Text.propTypes = {
   bold: PropTypes.number,
   mt: PropTypes.number,
   mb: PropTypes.number,
+  ml: PropTypes.number,
+  mr: PropTypes.number,
   fs: PropTypes.number,
   text: PropTypes.string.isRequired,
 };

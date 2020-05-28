@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import firebase from '../../services/firebase';
-
 import {
   Layout,
   Container,
@@ -11,67 +9,24 @@ import {
   Button,
   Alert,
 } from '../../components';
-import { useGlobal } from '../../contexts/GlobalContext';
+
+import { useAuth } from '../../contexts/AuthContext';
 
 const Login = () => {
   const navigation = useNavigation();
 
-  const {
-    alertModal,
-    setAlertModal,
-    loadingButton,
-    setLoadingButton,
-  } = useGlobal();
+  const { login, alertModal, loadingButton } = useAuth();
 
-  const [email, setEmail] = useState('a@teste.com');
-  const [password, setPassword] = useState('123123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    // setLoadingButton(true);
-    // setTimeout(() => {
-    //   setLoadingButton(false);
-    //   setAlertModal({
-    //     type: 'success',
-    //     body: 'Modal de exemplo',
-    //     visible: true,
-    //   });
-    // }, 1500);
-
-    setLoadingButton(true);
-
-    if (email === '' || password === '') {
-      setLoadingButton(false);
-      setAlertModal({
-        type: 'warning',
-        body: 'Preencha todos os campos!',
-        visible: true,
-      });
-      return;
-    }
-
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        setLoadingButton(false);
-      })
-      .catch(() => {
-        setLoadingButton(false);
-        setAlertModal({
-          type: 'error',
-          body: 'Ah não usuário ou senha inválidos!',
-          visible: true,
-        });
-      });
+    login(email, password);
   };
 
   return (
     <Layout justify="center">
-      <Alert
-        type={alertModal.type}
-        body={alertModal.body}
-        visible={alertModal.visible}
-      />
+      <Alert {...alertModal} />
       <Container>
         <Icon name="account-circle" size={75} mb={25} />
         <Input

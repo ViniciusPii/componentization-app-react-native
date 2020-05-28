@@ -10,6 +10,8 @@ export const Input = styled.TextInput.attrs(
   padding-left: 10px;
   margin-top: ${({ mt }) => mt}px;
   margin-bottom: ${({ mb }) => mb}px;
+  margin-left: ${({ ml }) => ml}px;
+  margin-right: ${({ mr }) => mr}px;
   border: 1px solid
     ${({ theme, borderColor }) => theme.appColors.input[borderColor]};
   border-radius: 5px;

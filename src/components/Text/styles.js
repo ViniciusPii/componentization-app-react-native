@@ -7,5 +7,7 @@ export const Text = styled.Text`
   font-style: ${({ fontStyle }) => fontStyle};
   margin-top: ${({ mt }) => mt}px;
   margin-bottom: ${({ mb }) => mb}px;
+  margin-left: ${({ ml }) => ml}px;
+  margin-right: ${({ mr }) => mr}px;
   color: ${({ theme, textColor }) => theme.appColors[textColor]};
 `;
