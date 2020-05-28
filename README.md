@@ -41,6 +41,8 @@ Todas alterações que o projeto sofrer, seja atualizações ou implementações
 ### Gerenciamento de states:
 - implementação de um gerenciador de states:
   - ContextApi
+    - Criação do GlobalContext e do hook useGlobal
+    - Criação do AuthContext e do hook useAuth
  
 ## Contato
  

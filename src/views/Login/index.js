@@ -23,8 +23,8 @@ const Login = () => {
     setLoadingButton,
   } = useGlobal();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('a@teste.com');
+  const [password, setPassword] = useState('123123');
 
   const handleLogin = async () => {
     // setLoadingButton(true);

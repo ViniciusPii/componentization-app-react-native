@@ -4,7 +4,7 @@ export default {
   appColors: {
     ...colors,
     // cores da sua app
-    primaryColor: colors.purpleRed,
+    primaryColor: colors.red,
     secondaryColor: colors.neutral100,
     // cores dos textos e titulos da sua app
     textColor: colors.neutral600,
