@@ -100,6 +100,19 @@ export default {
   celeste900: '#003447',
   celeste950: '#00121a',
 
+  // Chartreuse
+  chartreuse50: '#fbfee6',
+  chartreuse100: '#f6fdcc',
+  chartreuse200: '#eefc99',
+  chartreuse300: '#e5fa67',
+  chartreuse400: '#ddf934',
+  chartreuse500: '#d4f701',
+  chartreuse600: '#aac601',
+  chartreuse700: '#7f9401',
+  chartreuse800: '#556300',
+  chartreuse900: '#2a3100',
+  chartreuse950: '#151900',
+
   // Carmin
   crimson50: '#FFD0DC',
   crimson100: '#FFB9CA',
